@@ -1,0 +1,35 @@
+.vh{
+    height:85vh;
+}
+
+img{
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.btn-section{
+    width:100%;
+    height:100px;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+}
+
+.btn-test{
+    background: #1c3f88;
+    border: 2px solid #1c3f88;
+    font-size: 1.3rem;
+    width: 150px;
+    border-radius: 30px;
+    padding: 5px;
+}
+
+.btn-sign-in{
+    background-color: transparent;
+    border: 2px solid #1c3f88;
+    color: #1c3f88;
+    font-size: 1.3rem;
+    width: 150px;
+    border-radius: 30px;
+    padding: 5px;
+}

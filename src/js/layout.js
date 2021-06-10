@@ -2,12 +2,12 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
-import { Home } from "./views/home";
+import { LandingPage } from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 
-import { Navbar } from "./component/navbar";
+import { Menu } from "./component/navbar";
 import { Footer } from "./component/footer";
 
 //create your first component
@@ -17,13 +17,13 @@ const Layout = () => {
 	const basename = process.env.BASENAME || "";
 
 	return (
-		<div className="d-flex flex-column">
+		<div>
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
-					<Navbar />
+					<Menu />
 					<Switch>
 						<Route exact path="/">
-							<Home />
+							<LandingPage />
 						</Route>
 						<Route exact path="/demo">
 							<Demo />
