@@ -2,16 +2,27 @@
     height: 100px;
 }
 
+.all-nav-link-custom{
+    margin-right: 4rem;
+}
+
 .nav-link-custom{
+    background: transparent;
+    border: none;
     font-size: 1.3rem;
+    font-weight: bold;
     color: #1c3f88 !important;
+    margin-right: 1.5rem;
 }
 
 .nav-sign-up{
     font-size: 1.3rem;
     color: white !important;
     background-color: #1c3f88 !important;
-    border-radius:30px;
+    border: 1px solid #1c3f88;
+    width: 120px;
+    border-radius: 30px;
+    padding: 2px;
 }
 
 .nav-sign-up:hover{
@@ -27,10 +38,4 @@
     border: 1px solid #1c3f88;
     border-radius: 5px;
     transition: ease-out .2s;
-}
-
-.navbar-expand .navbar-nav .nav-link {
-    padding-left: 1.3rem;
-    padding-right: 1.3rem;
-    margin: 5px 5px;
 }

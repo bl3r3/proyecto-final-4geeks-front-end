@@ -1,0 +1,28 @@
+.items-custom{
+    text-align: center;
+}
+
+.btn-start{
+    background: #1c3f88;
+    border: 1px solid #1c3f88;
+    font-size: 1.3rem;
+    width: 120px;
+    border-radius: 30px;
+    padding: 4px;
+}
+
+.btn-start:hover{
+    font-size: 1.3rem;
+    color: #1c3f88 !important;
+    background-color: transparent !important;
+    border: 1px solid #1c3f88;
+    border-radius:30px !important;
+    transition: ease-in .1s;
+}
+
+.btn-back{
+    background: none;
+    border: none;
+    font-size: 1rem;
+    margin-top: 15px;
+}
