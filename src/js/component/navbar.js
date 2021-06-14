@@ -6,19 +6,19 @@ import "../../styles/navbar.scss";
 export const Menu = () => {
 	return (
 		<Navbar className="nav-height">
-			<Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+			<Navbar.Brand href="">React-Bootstrap</Navbar.Brand>
 			<Navbar.Toggle aria-controls="basic-navbar-nav" />
 			<Navbar.Collapse id="basic-navbar-nav">
 				<Nav className="ml-auto all-nav-link-custom">
-					<Link to="/test">
-						<button className="nav-link-custom">TEST</button>
-					</Link>
-					<Link to="/">
-						<button className="nav-link-custom">Sign In</button>
-					</Link>
-					<Link to="/signup">
-						<button className="nav-sign-up">Sign Up</button>
-					</Link>
+					<Nav.Link className="nav-link-custom" href="/test">
+						TEST
+					</Nav.Link>
+					<Nav.Link className="nav-link-custom" href="">
+						SIGN IN
+					</Nav.Link>
+					<Nav.Link className="nav-sign-up" href="/signup">
+						Sign up
+					</Nav.Link>
 				</Nav>
 			</Navbar.Collapse>
 		</Navbar>

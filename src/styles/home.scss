@@ -1,5 +1,5 @@
 .vh{
-    height:85vh;
+    height:100vh;
 }
 
 img{
@@ -21,7 +21,7 @@ img{
     height:100px;
     display: flex;
     align-items: center;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
 }
 
 .btn-test{
@@ -39,6 +39,7 @@ img{
     border: 2px solid #1c3f88;
     color: #1c3f88;
     font-size: 1.3rem;
+    font-weight: bold;
     width: 150px;
     border-radius: 30px;
     padding: 5px;
@@ -53,6 +54,47 @@ img{
     transition: ease-in .1s;
 }
 
+.title-custom3{
+    margin-top: 60px;
+    margin-bottom: 80px;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.title-custom4{
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.img-custom{
+    width: 180px;
+    height: 180px;
+}
+
+.cards-group-custom{
+    text-align: center;
+    background-color: transparent;
+    border-style: none;
+}
+
+.first-card-custom{
+    width: 360px;
+    height: 580px;
+    margin: 60px 0 60px 180px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+}
+
 .cards-custom{
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.219);
+    width: 350px;
+    margin: 15px;
+
+}
+
+.cards-custom:hover{
+    box-shadow: 5px 08px 20px 1px rgba(0, 0, 0, 0.2);
     border-radius: 25px;
 }
