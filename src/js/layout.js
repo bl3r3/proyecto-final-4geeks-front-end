@@ -7,6 +7,7 @@ import { SignupPage } from "./views/signup";
 import { TestPage } from "./views/test";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
+import { Login } from "./views/Login";
 import injectContext from "./store/appContext";
 
 import { Menu } from "./component/navbar";
@@ -30,7 +31,7 @@ const Layout = () => {
 						<Route exact path="/test">
 							<TestPage />
 						</Route>
-						<Route exact path="/home">
+						<Route exact path="/">
 							<LandingPage />
 						</Route>
 						<Route exact path="/demo">
@@ -38,6 +39,9 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/single/:theid">
 							<Single />
+						</Route>
+						<Route exact path="/login">
+							<Login />
 						</Route>
 						<Route>
 							<h1>Not found!</h1>
