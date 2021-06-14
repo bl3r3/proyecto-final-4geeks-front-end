@@ -7,8 +7,8 @@ import "../../styles/test.scss";
 
 export const TestPage = () => {
 	return (
-		<Container className="d-flex">
-			<Row className="d-flex justify-content-center align-items-center">
+		<Container className="d-flex justify-content-center align-items-center vh">
+			<Row>
 				<Col className="items-custom">
 					<h1>Welcome to the Test!</h1>
 					<p>
@@ -17,7 +17,7 @@ export const TestPage = () => {
 						sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
 						Aldus PageMaker including versions of Lorem Ipsum.
 					</p>
-					<Button className="btn-start" type="submit">
+					<Button className="btn-custom" variant="light" type="submit">
 						START
 					</Button>
 					<Link to="/home">

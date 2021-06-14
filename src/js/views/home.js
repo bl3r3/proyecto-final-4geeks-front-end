@@ -42,7 +42,7 @@ export const LandingPage = props => {
 						<Link to="/test">
 							<button className="btn-test">GO TEST</button>
 						</Link>
-						<Link to="/">
+						<Link to="/login">
 							<button className="btn-sign-in">SIGN IN</button>
 						</Link>
 					</div>
@@ -55,9 +55,8 @@ export const LandingPage = props => {
 					<h3>Encuentra al profesional que mejor se adapte a tus necesidades</h3>
 					<br />
 					<p>
-						Si tienes un problema y te sientes superado, aquí encontrarás psicólogos que te ayudarán a
-						alcanzar las soluciones que necesitas. Da el primer paso, contacta con un psicólogo y accede a
-						un servicio profesional, de calidad y orientado a resultados.
+						Aquí encontrarás psicólogos que te ayudarán a alcanzar las soluciones que necesitas. Da el
+						primer paso, contacta y accede a un servicio profesional, de calidad y orientado a resultados.
 					</p>
 					<Image className="img-custom" src={img_section2} roundedCircle />
 					<Image className="img-custom" src={img2_section2} roundedCircle />
@@ -66,23 +65,16 @@ export const LandingPage = props => {
 						<Card className="cards-group-custom">
 							<Card.Body>
 								<Card.Title>Psicológos</Card.Title>
-								<Card.Text>
-									Profesionales con amplia experiencia en diversas áreas y enfoques terapéuticos.
-								</Card.Text>
 							</Card.Body>
 						</Card>
 						<Card className="cards-group-custom">
 							<Card.Body>
-								<Card.Title>Online</Card.Title>
-								<Card.Text>Plataforma que abre paso a la obtención de ayuda en línea.</Card.Text>
+								<Card.Title>Plataforma Online</Card.Title>
 							</Card.Body>
 						</Card>
 						<Card className="cards-group-custom">
 							<Card.Body>
 								<Card.Title>Comodidad</Card.Title>
-								<Card.Text>
-									Todo desde tu navegador: calendario de citas, progreso, herramientas...
-								</Card.Text>
 							</Card.Body>
 						</Card>
 					</CardGroup>
@@ -90,12 +82,31 @@ export const LandingPage = props => {
 				<Col>
 					<Card className="first-card-custom">
 						<Card.Body>
-							<Card.Title variant="top">EMPEZAR TERAPIA</Card.Title>
-							<ListGroup className="list-group-custom" variant="flush">
-								<ListGroup.Item>Crea tu cuenta gratuita.</ListGroup.Item>
-								<ListGroup.Item>Busca un profesional en el directorio de psicólogos.</ListGroup.Item>
-								<ListGroup.Item>Elige modalidad de consulta y horario.</ListGroup.Item>
-								<ListGroup.Item>Comienza la terapia.</ListGroup.Item>
+							<Card.Title className="title-custom5" variant="top">
+								EMPEZAR TERAPIA
+							</Card.Title>
+							<Card.Text>En tan solo 5 pasos...</Card.Text>
+							<ListGroup variant="flush">
+								<ListGroup.Item className="d-flex align-items-center list-group-custom">
+									<div className="block-o">1</div>
+									Realiza el test.
+								</ListGroup.Item>
+								<ListGroup.Item className="d-flex align-items-center list-group-custom">
+									<div className="block-o">2</div>
+									Crea tu cuenta gratuita.
+								</ListGroup.Item>
+								<ListGroup.Item className="d-flex align-items-center list-group-custom">
+									<div className="block-o">3</div>
+									Selecciona un profesional.
+								</ListGroup.Item>
+								<ListGroup.Item className="d-flex align-items-center list-group-custom">
+									<div className="block-o">4</div>
+									Elige Fecha y Hora.
+								</ListGroup.Item>
+								<ListGroup.Item className="d-flex align-items-center list-group-custom">
+									<div className="block-o">5</div>
+									Comienza la terapia.
+								</ListGroup.Item>
 							</ListGroup>
 						</Card.Body>
 					</Card>

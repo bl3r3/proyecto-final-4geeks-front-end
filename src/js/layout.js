@@ -7,7 +7,7 @@ import { SignupPage } from "./views/signup";
 import { TestPage } from "./views/test";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
-import { Login } from "./views/Login";
+import { Login } from "./views/login";
 import injectContext from "./store/appContext";
 
 import { Menu } from "./component/navbar";

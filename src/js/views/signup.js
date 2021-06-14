@@ -6,7 +6,7 @@ import "../../styles/signup.scss";
 
 export const SignupPage = () => {
 	return (
-		<Container className="d-flex justify-content-center align-items-center">
+		<Container className="d-flex justify-content-center align-items-center vh">
 			<Row>
 				<Form>
 					<Row>
@@ -49,7 +49,7 @@ export const SignupPage = () => {
 						<Form.Check type="checkbox" label="I accept the terms and conditions" />
 					</Form.Group>
 
-					<Button className="btn-submit d-flex justify-content-center ml-auto" type="submit">
+					<Button className="d-flex justify-content-center ml-auto btn-custom" type="submit">
 						Submit
 					</Button>
 				</Form>

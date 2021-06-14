@@ -47,6 +47,7 @@ img{
 
 .btn-test:hover{
     font-size: 1.3rem;
+    font-weight: bold;
     color: #1c3f88 !important;
     background-color: transparent !important;
     border: 1px solid #1c3f88;
@@ -82,7 +83,7 @@ img{
     width: 360px;
     height: 580px;
     margin: 60px 0 60px 180px;
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.219);
     color: rgb(0, 0, 0);
 }
 
@@ -97,4 +98,25 @@ img{
 .cards-custom:hover{
     box-shadow: 5px 08px 20px 1px rgba(0, 0, 0, 0.2);
     border-radius: 25px;
+}
+
+.block-o{
+    color: white;
+    background-color: #1c3f88;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.title-custom5{
+    font-size: 2rem;
+}
+
+.list-group-custom{
+    background-color: transparent;
+    margin-top: 10px;
+    margin-bottom: 25px;
 }

@@ -1,17 +1,18 @@
+.vh{
+    height:70vh;
+}
+
 .items-custom{
     text-align: center;
 }
 
-.btn-start{
-    background: #1c3f88;
-    border: 1px solid #1c3f88;
+.btn-custom{
     font-size: 1.3rem;
+    border-radius: 20px;
     width: 120px;
-    border-radius: 30px;
-    padding: 4px;
 }
 
-.btn-start:hover{
+.btn-custom:hover{
     font-size: 1.3rem;
     color: #1c3f88 !important;
     background-color: transparent !important;

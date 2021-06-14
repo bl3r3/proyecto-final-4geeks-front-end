@@ -13,7 +13,7 @@ export const Menu = () => {
 					<Nav.Link className="nav-link-custom" href="/test">
 						TEST
 					</Nav.Link>
-					<Nav.Link className="nav-link-custom" href="">
+					<Nav.Link className="nav-link-custom" href="/login">
 						SIGN IN
 					</Nav.Link>
 					<Nav.Link className="nav-sign-up" href="/signup">
