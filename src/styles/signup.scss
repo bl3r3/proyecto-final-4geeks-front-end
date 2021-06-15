@@ -1,16 +1,18 @@
+/*****************Características del container*****************/
 .vh{
     height:70vh;
 }
 
-.input-custom{
-    border-radius: 20px;
-}
-
-.form-custom{
+/*****************Características del formulario*****************/
+.custom-form{
     width: 500px;
 }
 
-.btn-custom{
+.custom-input{
+    border-radius: 20px;
+}
+
+.custom-btn{
     font-size: 1.2rem !important;
     color: gray;
     border-radius: 20px;
@@ -19,7 +21,7 @@
     border: none;
 }
 
-.btn-custom:hover{
+.custom-btn:hover{
     font-size: 0.9rem;
     color: #1c3f88 !important;
     background-color: transparent !important;

@@ -11,11 +11,11 @@ export const Login = () => {
 	const [password, setPassword] = useState("");
 	return (
 		<Container className="d-flex justify-content-center align-items-center vh">
-			<Form className="form-custom">
+			<Form className="custom-form">
 				<Form.Group>
 					<Form.Label>Email address</Form.Label>
 					<Form.Control
-						className="input-custom"
+						className="custom-input"
 						type="email"
 						placeholder="Enter email"
 						value={email}
@@ -26,7 +26,7 @@ export const Login = () => {
 				<Form.Group controlId="formBasicPassword">
 					<Form.Label>Password</Form.Label>
 					<Form.Control
-						className="input-custom"
+						className="custom-input"
 						type="password"
 						placeholder="Password"
 						value={password}
@@ -35,7 +35,7 @@ export const Login = () => {
 				</Form.Group>
 
 				<Button
-					className="d-flex justify-content-center ml-auto btn-custom"
+					className="d-flex justify-content-center ml-auto custom-btn"
 					type="submit"
 					onClick={async e => {
 						let result = await actions.log_in(email, password);

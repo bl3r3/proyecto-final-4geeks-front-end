@@ -32,18 +32,18 @@ export const LandingPage = props => {
 		}
 	];
 	return (
-		<Container className="d-flex">
+		<Container className="">
 			<Row className="d-flex justify-content-center align-items-center">
 				<Col md={5} center>
-					<h1 className="title-custom">NEED SOME</h1>
-					<h2 className="title-custom2">HELP?</h2>
+					<h1 className="custom-title">NEED SOME</h1>
+					<h2 className="custom-title2">HELP?</h2>
 					<h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h3>
 					<div className="btn-section">
 						<Link to="/test">
-							<button className="btn-test">GO TEST</button>
+							<button className="test-btn">GO TEST</button>
 						</Link>
-						<Link to="/login">
-							<button className="btn-sign-in">SIGN IN</button>
+						<Link to="/dashboard">
+							<button className="sign-in-btn">SIGN IN</button>
 						</Link>
 					</div>
 				</Col>
@@ -51,28 +51,28 @@ export const LandingPage = props => {
 					<img src={img_main} width="120%" />
 				</Col>
 				<Col center>
-					<h2 className="title-custom4">TERAPIA PSICOLÓGICA</h2>
+					<h2 className="custom-title3">TERAPIA PSICOLÓGICA</h2>
 					<h3>Encuentra al profesional que mejor se adapte a tus necesidades</h3>
 					<br />
 					<p>
 						Aquí encontrarás psicólogos que te ayudarán a alcanzar las soluciones que necesitas. Da el
 						primer paso, contacta y accede a un servicio profesional, de calidad y orientado a resultados.
 					</p>
-					<Image className="img-custom" src={img_section2} roundedCircle />
-					<Image className="img-custom" src={img2_section2} roundedCircle />
-					<Image className="img-custom" src={img3_section2} roundedCircle />
+					<Image className="custom-image" src={img_section2} roundedCircle />
+					<Image className="custom-image" src={img2_section2} roundedCircle />
+					<Image className="custom-image" src={img3_section2} roundedCircle />
 					<CardGroup>
-						<Card className="cards-group-custom">
+						<Card className="custom-cards-group">
 							<Card.Body>
 								<Card.Title>Psicológos</Card.Title>
 							</Card.Body>
 						</Card>
-						<Card className="cards-group-custom">
+						<Card className="custom-cards-group">
 							<Card.Body>
 								<Card.Title>Plataforma Online</Card.Title>
 							</Card.Body>
 						</Card>
-						<Card className="cards-group-custom">
+						<Card className="custom-cards-group">
 							<Card.Body>
 								<Card.Title>Comodidad</Card.Title>
 							</Card.Body>
@@ -80,38 +80,38 @@ export const LandingPage = props => {
 					</CardGroup>
 				</Col>
 				<Col>
-					<Card className="first-card-custom">
+					<Card className="custom-left-card">
 						<Card.Body>
-							<Card.Title className="title-custom5" variant="top">
+							<Card.Title className="custom-title4" variant="top">
 								EMPEZAR TERAPIA
 							</Card.Title>
 							<Card.Text>En tan solo 5 pasos...</Card.Text>
 							<ListGroup variant="flush">
-								<ListGroup.Item className="d-flex align-items-center list-group-custom">
-									<div className="block-o">1</div>
+								<ListGroup.Item className="d-flex align-items-center custom-list-group">
+									<div className="number-block">1</div>
 									Realiza el test.
 								</ListGroup.Item>
-								<ListGroup.Item className="d-flex align-items-center list-group-custom">
-									<div className="block-o">2</div>
+								<ListGroup.Item className="d-flex align-items-center custom-list-group">
+									<div className="number-block">2</div>
 									Crea tu cuenta gratuita.
 								</ListGroup.Item>
-								<ListGroup.Item className="d-flex align-items-center list-group-custom">
-									<div className="block-o">3</div>
+								<ListGroup.Item className="d-flex align-items-center custom-list-group">
+									<div className="number-block">3</div>
 									Selecciona un profesional.
 								</ListGroup.Item>
-								<ListGroup.Item className="d-flex align-items-center list-group-custom">
-									<div className="block-o">4</div>
+								<ListGroup.Item className="d-flex align-items-center custom-list-group">
+									<div className="number-block">4</div>
 									Elige Fecha y Hora.
 								</ListGroup.Item>
-								<ListGroup.Item className="d-flex align-items-center list-group-custom">
-									<div className="block-o">5</div>
+								<ListGroup.Item className="d-flex align-items-center custom-list-group">
+									<div className="number-block">5</div>
 									Comienza la terapia.
 								</ListGroup.Item>
 							</ListGroup>
 						</Card.Body>
 					</Card>
 				</Col>
-				<h2 className="title-custom3">¡Herramientas que te pueden ayudar!</h2>
+				<h2 className="custom-title5">¡Herramientas que te pueden ayudar!</h2>
 				{cards.map(card => (
 					<ToolCard key={card.id} title={card.title} imgSource={card.image} />
 				))}

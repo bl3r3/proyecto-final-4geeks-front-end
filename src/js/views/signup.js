@@ -13,24 +13,24 @@ export const SignupPage = () => {
 						<Col>
 							<Form.Group>
 								<Form.Label>Fist Name</Form.Label>
-								<Form.Control className="input-custom" type="text" placeholder="First name" />
+								<Form.Control className="custom-input" type="text" placeholder="First name" />
 							</Form.Group>
 						</Col>
 						<Col>
 							<Form.Group>
 								<Form.Label>Last Name</Form.Label>
-								<Form.Control className="input-custom" type="text" placeholder="Last name" />
+								<Form.Control className="custom-input" type="text" placeholder="Last name" />
 							</Form.Group>
 						</Col>
 					</Row>
 					<Form.Group controlId="formBasicEmail">
 						<Form.Label>Email address</Form.Label>
-						<Form.Control className="input-custom" type="email" placeholder="Enter email" />
+						<Form.Control className="custom-input" type="email" placeholder="Enter email" />
 					</Form.Group>
 
 					<Form.Group controlId="formBasicPassword">
 						<Form.Label>Password</Form.Label>
-						<Form.Control className="input-custom" type="password" placeholder="Password" />
+						<Form.Control className="custom-input" type="password" placeholder="Password" />
 					</Form.Group>
 
 					<Form.Group controlId="formGridState">
@@ -49,7 +49,7 @@ export const SignupPage = () => {
 						<Form.Check type="checkbox" label="I accept the terms and conditions" />
 					</Form.Group>
 
-					<Button className="d-flex justify-content-center ml-auto btn-custom" type="submit">
+					<Button className="d-flex justify-content-center ml-auto custom-btn" type="submit">
 						Submit
 					</Button>
 				</Form>

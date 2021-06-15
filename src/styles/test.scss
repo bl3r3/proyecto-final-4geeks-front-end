@@ -1,18 +1,20 @@
+/*****************Características del container*****************/
 .vh{
     height:70vh;
 }
 
-.items-custom{
+/*****************Características del nav*****************/
+.custom-items{
     text-align: center;
 }
 
-.btn-custom{
+.custom-btn{
     font-size: 1.3rem;
     border-radius: 20px;
     width: 120px;
 }
 
-.btn-custom:hover{
+.custom-btn:hover{
     font-size: 1.3rem;
     color: #1c3f88 !important;
     background-color: transparent !important;
@@ -21,7 +23,7 @@
     transition: ease-in .1s;
 }
 
-.btn-back{
+.btn-go-back{
     background: none;
     border: none;
     font-size: 1rem;
