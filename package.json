@@ -78,13 +78,20 @@
 	},
 	"dependencies": {
 		"bootstrap": "^4.6.0",
+		"formik": "^2.2.9",
+		"formik-wizard": "^3.1.2",
 		"prop-types": "^15.6.1",
 		"react": "^16.8.4",
+		"react-albus": "^2.0.0",
 		"react-bootstrap": "^1.6.1",
 		"react-dom": "^16.8.4",
+		"react-hook-form": "^7.8.6",
 		"react-polyfills": "0.0.1",
 		"react-router-dom": "^5.2.0",
 		"react-slick": "^0.28.1",
-		"slick-carousel": "^1.8.1"
+		"react-step-wizard": "^5.3.6",
+		"react-stepzilla": "^6.0.2",
+		"slick-carousel": "^1.8.1",
+		"yup": "^0.32.9"
 	}
 }
