@@ -25,9 +25,8 @@
 .nav-sign-up{
     font-size: 1.3rem;
     text-align: center;
-    color: white !important;
-    background-color: #1c3f88 !important;
-    border: 1px solid #1c3f88;
+    color: rgb(255, 255, 255) !important;
+    background-color: transparent !important;
     width: 120px;
     border-radius: 30px;
 }
@@ -39,4 +38,8 @@
     border: 1px solid #1c3f88;
     border-radius:30px !important;
     transition: ease-in .1s;
+}
+
+.q{
+    background-color: transparent;
 }

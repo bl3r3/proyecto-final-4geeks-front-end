@@ -1,36 +1,30 @@
 import React from "react";
-import { ToolCard } from "../component/cards.js";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { Container, Row, Col, Card, Button, ListGroup, CardGroup, Image } from "react-bootstrap";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+
 import img_main from "../../img/drawkit.png";
 import img_card from "../../img/Meditacion.jpg";
 import img_card2 from "../../img/Respiracion.jpg";
 import img_card3 from "../../img/Concentracion.jpg";
+import img_card4 from "../../img/Comunicacion.jpg";
+import img_card5 from "../../img/Relajacion.jpg";
+import img_card6 from "../../img/Insomnio.jpg";
 import img_section2 from "../../img/Psicologos.jpg";
 import img2_section2 from "../../img/Online.jpg";
 import img3_section2 from "../../img/Comodidad.jpg";
 
 import "../../styles/home.scss";
+import "swiper/swiper.scss";
+import "swiper/components/navigation/navigation.scss";
+import "swiper/components/pagination/pagination.scss";
+import "swiper/components/scrollbar/scrollbar.scss";
+
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 export const LandingPage = props => {
-	const cards = [
-		{
-			id: 1,
-			title: "Meditación",
-			image: img_card
-		},
-		{
-			id: 2,
-			title: "Respiración",
-			image: img_card2
-		},
-		{
-			id: 3,
-			title: "Concentración",
-			image: img_card3
-		}
-	];
 	return (
 		<Container className="">
 			<Row className="d-flex justify-content-center align-items-center">
@@ -112,9 +106,123 @@ export const LandingPage = props => {
 					</Card>
 				</Col>
 				<h2 className="custom-title5">¡Herramientas que te pueden ayudar!</h2>
-				{cards.map(card => (
-					<ToolCard key={card.id} title={card.title} imgSource={card.image} />
-				))}
+				<Swiper
+					spaceBetween={-20}
+					slidesPerView={3}
+					navigation
+					onSlideChange={() => console.log("slide change")}
+					onSwiper={swiper => console.log(swiper)}>
+					<SwiperSlide>
+						<Card className="custom-cards">
+							<Card.Img variant="top" src={img_card} />
+							<Card.Body>
+								<Card.Title>Meditación</Card.Title>
+								<Card.Text>
+									Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+									piece of classical Latin literature from 45 BC, making it over 2000 years old..{" "}
+								</Card.Text>
+								<Button className="d-flex ml-auto" variant="light">
+									Leer más
+								</Button>
+							</Card.Body>
+							<Card.Footer>
+								<small className="text-muted">Last updated 3 mins ago</small>
+							</Card.Footer>
+						</Card>
+					</SwiperSlide>
+					<SwiperSlide>
+						<Card className="custom-cards">
+							<Card.Img variant="top" src={img_card2} />
+							<Card.Body>
+								<Card.Title>Respiración</Card.Title>
+								<Card.Text>
+									Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+									piece of classical Latin literature from 45 BC, making it over 2000 years old..{" "}
+								</Card.Text>
+								<Button className="d-flex ml-auto" variant="light">
+									Leer más
+								</Button>
+							</Card.Body>
+							<Card.Footer>
+								<small className="text-muted">Last updated 3 mins ago</small>
+							</Card.Footer>
+						</Card>
+					</SwiperSlide>
+					<SwiperSlide>
+						<Card className="custom-cards">
+							<Card.Img variant="top" src={img_card3} />
+							<Card.Body>
+								<Card.Title>Concentración</Card.Title>
+								<Card.Text>
+									Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+									piece of classical Latin literature from 45 BC, making it over 2000 years old..{" "}
+								</Card.Text>
+								<Button className="d-flex ml-auto" variant="light">
+									Leer más
+								</Button>
+							</Card.Body>
+							<Card.Footer>
+								<small className="text-muted">Last updated 3 mins ago</small>
+							</Card.Footer>
+						</Card>
+					</SwiperSlide>
+					<SwiperSlide>
+						<Card className="custom-cards">
+							<Card.Img variant="top" src={img_card4} />
+							<Card.Body>
+								<Card.Title>Comunicación</Card.Title>
+								<Card.Text>
+									Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+									piece of classical Latin literature from 45 BC, making it over 2000 years old..{" "}
+								</Card.Text>
+								<Button className="d-flex ml-auto" variant="light">
+									Leer más
+								</Button>
+							</Card.Body>
+							<Card.Footer>
+								<small className="text-muted">Last updated 3 mins ago</small>
+							</Card.Footer>
+						</Card>
+					</SwiperSlide>
+					<SwiperSlide>
+						<Card className="custom-cards">
+							<Card.Img variant="top" src={img_card5} />
+							<Card.Body>
+								<Card.Title>Relajación</Card.Title>
+								<Card.Text>
+									Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+									piece of classical Latin literature from 45 BC, making it over 2000 years old..{" "}
+								</Card.Text>
+								<Button className="d-flex ml-auto" variant="light">
+									Leer más
+								</Button>
+							</Card.Body>
+							<Card.Footer>
+								<small className="text-muted">Last updated 3 mins ago</small>
+							</Card.Footer>
+						</Card>
+					</SwiperSlide>
+					<SwiperSlide>
+						<Card className="custom-cards">
+							<Card.Img variant="top" src={img_card6} />
+							<Card.Body>
+								<Card.Title>Insomnio</Card.Title>
+								<Card.Text>
+									Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+									piece of classical Latin literature from 45 BC, making it over 2000 years old..{" "}
+								</Card.Text>
+								<Link to="/blog">
+									<Button className="d-flex ml-auto" variant="light">
+										Leer más
+									</Button>
+								</Link>
+							</Card.Body>
+							<Card.Footer>
+								<small className="text-muted">Last updated 3 mins ago</small>
+							</Card.Footer>
+						</Card>
+					</SwiperSlide>
+				</Swiper>
 			</Row>
 		</Container>
 	);

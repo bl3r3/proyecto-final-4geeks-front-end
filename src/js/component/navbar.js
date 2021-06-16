@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Nav } from "react-bootstrap";
+import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import "../../styles/navbar.scss";
 
 export const Menu = () => {
@@ -15,9 +15,12 @@ export const Menu = () => {
 					<Nav.Link className="custom-nav-link" href="/login">
 						SIGN IN
 					</Nav.Link>
-					<Nav.Link className="nav-sign-up" href="/signup">
-						Sign up
-					</Nav.Link>
+					<NavDropdown className="nav-sign-up" variant="dark" title="Sign up">
+						<NavDropdown.Item className="q" href="signup">
+							Action
+						</NavDropdown.Item>
+						<NavDropdown.Item href="">Another action</NavDropdown.Item>
+					</NavDropdown>
 				</Nav>
 			</Navbar.Collapse>
 		</Navbar>
