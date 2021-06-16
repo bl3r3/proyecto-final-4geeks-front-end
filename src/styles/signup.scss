@@ -1,18 +1,28 @@
-.input-custom{
+/*****************Características del container*****************/
+.vh{
+    height:70vh;
+}
+
+/*****************Características del formulario*****************/
+.custom-form{
+    width: 500px;
+}
+
+.custom-input{
     border-radius: 20px;
 }
 
-.btn-submit{
-    background: #1c3f88;
-    border: 1px solid #1c3f88;
-    font-size: 1.3rem;
+.custom-btn{
+    font-size: 1.2rem !important;
+    color: gray;
+    border-radius: 20px;
     width: 120px;
-    border-radius: 30px;
-    padding: 4px;
+    background-color: white;
+    border: none;
 }
 
-.btn-submit:hover{
-    font-size: 1.3rem;
+.custom-btn:hover{
+    font-size: 0.9rem;
     color: #1c3f88 !important;
     background-color: transparent !important;
     border: 1px solid #1c3f88;

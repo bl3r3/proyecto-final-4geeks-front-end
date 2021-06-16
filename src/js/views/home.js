@@ -32,18 +32,18 @@ export const LandingPage = props => {
 		}
 	];
 	return (
-		<Container className="d-flex">
+		<Container className="">
 			<Row className="d-flex justify-content-center align-items-center">
 				<Col md={5} center>
-					<h1 className="title-custom">NEED SOME</h1>
-					<h2 className="title-custom2">HELP?</h2>
+					<h1 className="custom-title">NEED SOME</h1>
+					<h2 className="custom-title2">HELP?</h2>
 					<h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h3>
 					<div className="btn-section">
 						<Link to="/test">
-							<button className="btn-test">GO TEST</button>
+							<button className="test-btn">GO TEST</button>
 						</Link>
-						<Link to="/">
-							<button className="btn-sign-in">SIGN IN</button>
+						<Link to="/dashboard">
+							<button className="sign-in-btn">SIGN IN</button>
 						</Link>
 					</div>
 				</Col>
@@ -51,56 +51,67 @@ export const LandingPage = props => {
 					<img src={img_main} width="120%" />
 				</Col>
 				<Col center>
-					<h2 className="title-custom4">TERAPIA PSICOLÓGICA</h2>
+					<h2 className="custom-title3">TERAPIA PSICOLÓGICA</h2>
 					<h3>Encuentra al profesional que mejor se adapte a tus necesidades</h3>
 					<br />
 					<p>
-						Si tienes un problema y te sientes superado, aquí encontrarás psicólogos que te ayudarán a
-						alcanzar las soluciones que necesitas. Da el primer paso, contacta con un psicólogo y accede a
-						un servicio profesional, de calidad y orientado a resultados.
+						Aquí encontrarás psicólogos que te ayudarán a alcanzar las soluciones que necesitas. Da el
+						primer paso, contacta y accede a un servicio profesional, de calidad y orientado a resultados.
 					</p>
-					<Image className="img-custom" src={img_section2} roundedCircle />
-					<Image className="img-custom" src={img2_section2} roundedCircle />
-					<Image className="img-custom" src={img3_section2} roundedCircle />
+					<Image className="custom-image" src={img_section2} roundedCircle />
+					<Image className="custom-image" src={img2_section2} roundedCircle />
+					<Image className="custom-image" src={img3_section2} roundedCircle />
 					<CardGroup>
-						<Card className="cards-group-custom">
+						<Card className="custom-cards-group">
 							<Card.Body>
 								<Card.Title>Psicológos</Card.Title>
-								<Card.Text>
-									Profesionales con amplia experiencia en diversas áreas y enfoques terapéuticos.
-								</Card.Text>
 							</Card.Body>
 						</Card>
-						<Card className="cards-group-custom">
+						<Card className="custom-cards-group">
 							<Card.Body>
-								<Card.Title>Online</Card.Title>
-								<Card.Text>Plataforma que abre paso a la obtención de ayuda en línea.</Card.Text>
+								<Card.Title>Plataforma Online</Card.Title>
 							</Card.Body>
 						</Card>
-						<Card className="cards-group-custom">
+						<Card className="custom-cards-group">
 							<Card.Body>
 								<Card.Title>Comodidad</Card.Title>
-								<Card.Text>
-									Todo desde tu navegador: calendario de citas, progreso, herramientas...
-								</Card.Text>
 							</Card.Body>
 						</Card>
 					</CardGroup>
 				</Col>
 				<Col>
-					<Card className="first-card-custom">
+					<Card className="custom-left-card">
 						<Card.Body>
-							<Card.Title variant="top">EMPEZAR TERAPIA</Card.Title>
-							<ListGroup className="list-group-custom" variant="flush">
-								<ListGroup.Item>Crea tu cuenta gratuita.</ListGroup.Item>
-								<ListGroup.Item>Busca un profesional en el directorio de psicólogos.</ListGroup.Item>
-								<ListGroup.Item>Elige modalidad de consulta y horario.</ListGroup.Item>
-								<ListGroup.Item>Comienza la terapia.</ListGroup.Item>
+							<Card.Title className="custom-title4" variant="top">
+								EMPEZAR TERAPIA
+							</Card.Title>
+							<Card.Text>En tan solo 5 pasos...</Card.Text>
+							<ListGroup variant="flush">
+								<ListGroup.Item className="d-flex align-items-center custom-list-group">
+									<div className="number-block">1</div>
+									Realiza el test.
+								</ListGroup.Item>
+								<ListGroup.Item className="d-flex align-items-center custom-list-group">
+									<div className="number-block">2</div>
+									Crea tu cuenta gratuita.
+								</ListGroup.Item>
+								<ListGroup.Item className="d-flex align-items-center custom-list-group">
+									<div className="number-block">3</div>
+									Selecciona un profesional.
+								</ListGroup.Item>
+								<ListGroup.Item className="d-flex align-items-center custom-list-group">
+									<div className="number-block">4</div>
+									Elige Fecha y Hora.
+								</ListGroup.Item>
+								<ListGroup.Item className="d-flex align-items-center custom-list-group">
+									<div className="number-block">5</div>
+									Comienza la terapia.
+								</ListGroup.Item>
 							</ListGroup>
 						</Card.Body>
 					</Card>
 				</Col>
-				<h2 className="title-custom3">¡Herramientas que te pueden ayudar!</h2>
+				<h2 className="custom-title5">¡Herramientas que te pueden ayudar!</h2>
 				{cards.map(card => (
 					<ToolCard key={card.id} title={card.title} imgSource={card.image} />
 				))}

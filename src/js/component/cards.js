@@ -5,7 +5,7 @@ import { Card, Button, CardGroup } from "react-bootstrap";
 export const ToolCard = ({ title, imgSource }) => {
 	return (
 		<CardGroup>
-			<Card className="cards-custom">
+			<Card className="custom-cards">
 				<Card.Img variant="top" src={imgSource} />
 				<Card.Body>
 					<Card.Title>{title}</Card.Title>

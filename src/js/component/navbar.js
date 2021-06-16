@@ -1,19 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { Navbar, Nav } from "react-bootstrap";
 import "../../styles/navbar.scss";
 
 export const Menu = () => {
 	return (
 		<Navbar className="nav-height">
-			<Navbar.Brand href="">React-Bootstrap</Navbar.Brand>
+			<Navbar.Brand href="">MindCare</Navbar.Brand>
 			<Navbar.Toggle aria-controls="basic-navbar-nav" />
 			<Navbar.Collapse id="basic-navbar-nav">
-				<Nav className="ml-auto all-nav-link-custom">
-					<Nav.Link className="nav-link-custom" href="/test">
+				<Nav className="ml-auto all-custom-nav-links">
+					<Nav.Link className="custom-nav-link" href="/test">
 						TEST
 					</Nav.Link>
-					<Nav.Link className="nav-link-custom" href="">
+					<Nav.Link className="custom-nav-link" href="/login">
 						SIGN IN
 					</Nav.Link>
 					<Nav.Link className="nav-sign-up" href="/signup">
