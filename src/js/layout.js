@@ -9,6 +9,7 @@ import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import { Login } from "./views/login";
 import { Dashboard } from "./views/dashboard";
+import { Board } from "./views/board";
 import injectContext from "./store/appContext";
 
 import { Menu } from "./component/navbar";
@@ -46,6 +47,9 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/dashboard">
 							<Dashboard />
+						</Route>
+						<Route exact path="/board">
+							<Board />
 						</Route>
 						<Route>
 							<h1>Not found!</h1>
