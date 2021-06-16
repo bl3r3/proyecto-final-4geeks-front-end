@@ -10,7 +10,7 @@ import icon3 from "../../img/Libro.png";
 export const Dashboard = () => {
 	return (
 		<Row className="d-flex justify-content-center">
-			<Col md={5} center>
+			<Col md={2} center>
 				<div className="side-menu">
 					<Image className="custom-img" src={icon} />
 					<h2>Hola</h2>
@@ -20,7 +20,7 @@ export const Dashboard = () => {
 					<h2>Hola</h2>
 				</div>
 			</Col>
-			<Col md={7}>
+			<Col md={10}>
 				<div className="">Hola</div>
 			</Col>
 		</Row>

@@ -17,9 +17,9 @@ export const Menu = () => {
 					</Nav.Link>
 					<NavDropdown className="nav-sign-up" variant="dark" title="Sign up">
 						<NavDropdown.Item className="q" href="signup">
-							Action
+							Paciente
 						</NavDropdown.Item>
-						<NavDropdown.Item href="">Another action</NavDropdown.Item>
+						<NavDropdown.Item href="signup2">Profesional</NavDropdown.Item>
 					</NavDropdown>
 				</Nav>
 			</Navbar.Collapse>

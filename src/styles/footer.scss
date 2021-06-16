@@ -1,0 +1,25 @@
+.custom-footer{
+    margin-top: 80px;
+    background-color: rgba(143, 150, 150, 0.205);
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-block{
+    color: white;
+    text-align: center;
+    background-color: rgb(54, 53, 54);
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-anchor{
+    color: rgb(255, 255, 255);
+    font-weight: lighter;
+    margin-right: 20px;
+}

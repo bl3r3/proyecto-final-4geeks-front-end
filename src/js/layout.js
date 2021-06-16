@@ -4,12 +4,14 @@ import ScrollToTop from "./component/scrollToTop";
 
 import { LandingPage } from "./views/home";
 import { SignupPage } from "./views/signup";
-import { TestPage } from "./views/test";
+import { Signup2Page } from "./views/signup2";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
-import { Login } from "./views/login";
+import { Login } from "./views/Login";
+import { UserTest } from "./views/test/UserTest";
 import { Dashboard } from "./views/dashboard";
 import { Blog } from "./views/blog";
+import { Board } from "./views/board";
 import injectContext from "./store/appContext";
 
 import { Menu } from "./component/navbar";
@@ -30,8 +32,8 @@ const Layout = () => {
 						<Route exact path="/signup">
 							<SignupPage />
 						</Route>
-						<Route exact path="/test">
-							<TestPage />
+						<Route exact path="/signup2">
+							<Signup2Page />
 						</Route>
 						<Route exact path="/">
 							<LandingPage />
@@ -45,11 +47,17 @@ const Layout = () => {
 						<Route exact path="/login">
 							<Login />
 						</Route>
+						<Route exact path="/test">
+							<UserTest />
+						</Route>
 						<Route exact path="/dashboard">
 							<Dashboard />
 						</Route>
 						<Route exact path="/blog">
 							<Blog />
+						</Route>
+						<Route exact path="/board">
+							<Board />
 						</Route>
 						<Route>
 							<h1>Not found!</h1>

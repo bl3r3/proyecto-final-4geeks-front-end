@@ -3,7 +3,7 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 
 import "../../styles/signup.scss";
 
-export const SignupPage = () => {
+export const Signup2Page = () => {
 	return (
 		<Container className="d-flex justify-content-center align-items-center vh">
 			<Row>
@@ -30,6 +30,10 @@ export const SignupPage = () => {
 					<Form.Group controlId="formBasicPassword">
 						<Form.Label>Password</Form.Label>
 						<Form.Control className="custom-input" type="password" placeholder="Password" />
+					</Form.Group>
+
+					<Form.Group>
+						<Form.File id="exampleFormControlFile1" label="Select ID" />
 					</Form.Group>
 
 					<Form.Group controlId="formBasicCheckbox">

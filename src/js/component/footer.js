@@ -1,6 +1,8 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 
+import "../../styles/footer.scss";
+
 export const Footer = () => (
 	<>
 		<footer className="custom-footer py-3 text-center container-fluid">

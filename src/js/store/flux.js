@@ -2,6 +2,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			token: "",
+			testResultMessage: "",
 			demo: [
 				{
 					title: "FIRST",
@@ -75,6 +76,30 @@ const getState = ({ getStore, getActions, setStore }) => {
 					token,
 					user: JSON.parse(user)
 				});
+			},
+			// getDataTest: data => {
+			// 	console.log(data);
+			// },
+			resultTest: data => {
+				let pond =
+					parseInt(data.Question1) +
+					parseInt(data.Question2) +
+					parseInt(data.Question3) +
+					parseInt(data.Question4) +
+					parseInt(data.Question5);
+				console.log(data, pond);
+				let result;
+
+				if (pond >= 5 && pond <= 10) {
+					result = "Actualmente tu salud mental esta excelente!! 🎉";
+					setStore({ testResultMessage: result });
+				} else if (pond >= 11 && pond <= 15) {
+					result = "Hemos decetato altos nieveles de Estre 👀";
+					setStore({ testResultMessage: result });
+				} else {
+					result = "Necesitas ayuda, no estas bien 🙇‍♂️";
+					setStore({ testResultMessage: result });
+				}
 			}
 		}
 	};
