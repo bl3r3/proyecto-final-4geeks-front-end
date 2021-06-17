@@ -1,6 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
 import { Container, Row, Col, Card, Button, ListGroup, CardGroup, Image, CardDeck } from "react-bootstrap";
 
 import "../../styles/board.scss";

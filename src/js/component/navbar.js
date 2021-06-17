@@ -4,22 +4,22 @@ import "../../styles/navbar.scss";
 
 export const Menu = () => {
 	return (
-		<Navbar className="nav-height">
-			<Navbar.Brand href="">MindCare</Navbar.Brand>
-			<Navbar.Toggle aria-controls="basic-navbar-nav" />
-			<Navbar.Collapse id="basic-navbar-nav">
+		<Navbar className="nav-height" collapseOnSelect expand="lg">
+			<Navbar.Brand className="custom-brand-link" href="#home">
+				MindCare
+			</Navbar.Brand>
+			<Navbar.Toggle aria-controls="responsive-navbar-nav" />
+			<Navbar.Collapse id="responsive-navbar-nav">
 				<Nav className="ml-auto all-custom-nav-links">
-					<Nav.Link className="custom-nav-link" href="/test">
+					<Nav.Link href="/test" className="custom-nav-link">
 						TEST
 					</Nav.Link>
-					<Nav.Link className="custom-nav-link" href="/login">
+					<Nav.Link href="/login" className="custom-nav-link">
 						SIGN IN
 					</Nav.Link>
-					<NavDropdown className="nav-sign-up" variant="dark" title="Sign up">
-						<NavDropdown.Item className="q" href="signup">
-							Paciente
-						</NavDropdown.Item>
-						<NavDropdown.Item href="signup2">Profesional</NavDropdown.Item>
+					<NavDropdown className="nav-sign-up" title="Sign up" id="collasible-nav-dropdown">
+						<NavDropdown.Item href="/signup">Paciente</NavDropdown.Item>
+						<NavDropdown.Item href="/signup2">Médico</NavDropdown.Item>
 					</NavDropdown>
 				</Nav>
 			</Navbar.Collapse>

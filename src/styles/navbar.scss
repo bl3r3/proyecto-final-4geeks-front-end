@@ -1,45 +1,28 @@
 /*****************Características del navbar*****************/
 .nav-height{
     height: 100px;
+    background-color: transparent;
 }
 /*****************Características del nav*****************/
+.custom-brand-link{
+    margin-left: 50px;
+}
+
 .all-custom-nav-links{
-    margin-right: 4rem;
+    margin-right: 50px;
 }
 
 .custom-nav-link{
-    background: transparent;
+    background-color: transparent;
     border: none;
     font-size: 1.3rem;
     font-weight: bold;
     color: #1c3f88 !important;
-    margin-right: 1.5rem;
-}
-
-.custom-nav-link:hover{
-    border: 1px solid #1c3f88;
-    border-radius: 5px;
-    transition: ease-out .2s;
+    margin-right: 15px;
 }
 
 .nav-sign-up{
     font-size: 1.3rem;
-    text-align: center;
-    color: rgb(255, 255, 255) !important;
-    background-color: transparent !important;
-    width: 120px;
-    border-radius: 30px;
-}
-
-.nav-sign-up:hover{
-    font-size: 1.3rem;
     color: #1c3f88 !important;
     background-color: transparent !important;
-    border: 1px solid #1c3f88;
-    border-radius:30px !important;
-    transition: ease-in .1s;
-}
-
-.q{
-    background-color: transparent;
 }
