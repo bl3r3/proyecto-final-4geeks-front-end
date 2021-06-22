@@ -4,6 +4,7 @@ import { Row, Col, Image, Container } from "react-bootstrap";
 import { Agendar } from "./Agendar";
 import { Profesionals } from "./Profesionals";
 import { Citas } from "./Citas";
+import { Agendado } from "./Agendado";
 
 import { BrowserRouter as Router, Switch, Route, Link, useParams, useRouteMatch } from "react-router-dom";
 
@@ -45,6 +46,9 @@ export const Dashboard = () => {
 					</Route>
 					<Route path="/dashboard/citas">
 						<Citas />
+					</Route>
+					<Route path="/dashboard/agendado">
+						<Agendado />
 					</Route>
 				</Switch>
 			</Col>

@@ -4,22 +4,28 @@ import { useForm } from "react-hook-form";
 import Calendar from "react-calendar";
 import { Container, Col, Row } from "react-bootstrap";
 import { Context } from "../store/appContext";
+import { useHistory } from "react-router-dom";
 import "../../styles/calendar.css";
 
 export const FormAgendar = ({ profesionalId }) => {
 	const { store, actions } = useContext(Context);
 	const [date, setDate] = useState(new Date());
+	const history = useHistory();
 
 	const onChange = useCallback(date => setDate(date), [date]);
 
 	const onSubmit = useCallback(
-		data =>
-			actions.sendDateDay({
+		async data => {
+			let push = await actions.sendDateDay({
 				...data,
 				date: date.toLocaleDateString(),
 				profesional_id: profesionalId,
 				user_id: 8
-			}),
+			});
+			if (push) {
+				history.push("/dashboard/agendado");
+			}
+		},
 		[date]
 	);
 
@@ -65,7 +71,7 @@ export const FormAgendar = ({ profesionalId }) => {
 							</Form.Control>
 						</Form.Group>
 						<Button variant="primary" type="submit">
-							Submit
+							Agendar
 						</Button>
 					</Form>
 				</Col>

@@ -22,8 +22,11 @@ export const Citas = () => {
 			<Row>
 				{citas.map((cita, i) => (
 					<Col md={3} key={i}>
-						<Card style={{ width: "18rem" }}>
+						<Card style={{ width: "20rem" }}>
 							<Card.Body>
+								<Card.Title>
+									Medico: {cita.profesional.name} {cita.profesional.last_name}
+								</Card.Title>
 								<Card.Title>Dia: {cita.day_date}</Card.Title>
 								<Card.Title>Hora: {cita.schedule}</Card.Title>
 								<Card.Title>Via: {cita.via}</Card.Title>

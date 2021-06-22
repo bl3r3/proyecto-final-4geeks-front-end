@@ -3,6 +3,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			token: "",
 			testResultMessage: "",
+			agendado: "",
 			demo: [
 				{
 					title: "FIRST",
@@ -87,7 +88,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 					parseInt(data.Question3) +
 					parseInt(data.Question4) +
 					parseInt(data.Question5);
-				console.log(data, pond);
 				let result;
 
 				if (pond >= 5 && pond <= 10) {
@@ -102,8 +102,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			},
 			sendDateDay: async data => {
-				console.log(JSON.stringify(data));
-
 				let response = await fetch("http://192.168.42.161:3000/8/dates", {
 					method: "POST",
 					body: JSON.stringify({
@@ -113,6 +111,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 						"Content-Type": "application/json"
 					}
 				});
+				if (response.ok) {
+					let body = await response.json();
+					setStore({
+						agendado: body
+					});
+					return true;
+				}
+				return false;
 			}
 		}
 	};
