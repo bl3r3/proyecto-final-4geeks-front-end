@@ -12,6 +12,8 @@ export const FormAgendar = ({ profesionalId }) => {
 	const [date, setDate] = useState(new Date());
 	const history = useHistory();
 
+	let user_id_store = store.user.id;
+
 	const onChange = useCallback(date => setDate(date), [date]);
 
 	const onSubmit = useCallback(
@@ -20,7 +22,7 @@ export const FormAgendar = ({ profesionalId }) => {
 				...data,
 				date: date.toLocaleDateString(),
 				profesional_id: profesionalId,
-				user_id: 8
+				user_id: user_id_store
 			});
 			if (push) {
 				history.push("/dashboard/agendado");

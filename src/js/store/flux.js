@@ -8,20 +8,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 			professional: []
 		},
 		actions: {
-			create_user: async (name, last_name, email, password) => {
+			create_user: async data => {
 				try {
-					let response = await ("http://192.168.42.161:3000/sign_up",
-					{
+					let response = await fetch("http://192.168.42.161:3000/sign-up", {
 						method: "POST",
+						body: JSON.stringify(data),
 						headers: {
-							"Content-Type": "application/JSON"
-						},
-						body: JSON.stringify({
-							name,
-							last_name,
-							email,
-							password
-						})
+							"Content-Type": "application/json"
+						}
 					});
 					if (response.ok) {
 						return true;
@@ -63,13 +57,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 				return false;
 			},
 
-			log_in: async (email, password) => {
+			log_in: async data => {
 				let response = await fetch("http://192.168.42.161:3000/log-in", {
 					method: "POST",
-					body: JSON.stringify({
-						email,
-						password
-					}),
+					body: JSON.stringify(data),
 					headers: {
 						"Content-Type": "application/json"
 					}
@@ -128,7 +119,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			sendDateDay: async data => {
-				let response = await fetch("http://192.168.42.161:3000/8/dates", {
+				let store = getStore();
+				let user_id = store.user.id;
+				let response = await fetch(`http://192.168.42.161:3000/${user_id}/dates`, {
 					method: "POST",
 					body: JSON.stringify({
 						data

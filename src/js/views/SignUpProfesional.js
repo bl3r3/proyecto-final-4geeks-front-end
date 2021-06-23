@@ -3,7 +3,7 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 
 import "../../styles/signup.scss";
 
-export const Signup2 = () => {
+export const SignupProfesional = () => {
 	const [data, setData] = useState({
 		nombre: "",
 		apellido: "",
