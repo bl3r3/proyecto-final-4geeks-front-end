@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
 import { Container, Row, Col, Card, Button, ListGroup, CardGroup, Image } from "react-bootstrap";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
@@ -24,7 +23,7 @@ import "swiper/components/scrollbar/scrollbar.scss";
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
-export const LandingPage = props => {
+export const LandingPage = () => {
 	return (
 		<Container className="">
 			<Row className="d-flex justify-content-center align-items-center">
@@ -33,7 +32,7 @@ export const LandingPage = props => {
 					<h2 className="custom-title2">HELP?</h2>
 					<h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h3>
 					<div className="btn-section">
-						<Link to="/test">
+						<Link to="/UserTest">
 							<button className="test-btn">GO TEST</button>
 						</Link>
 						<Link to="/dashboard">
@@ -111,7 +110,8 @@ export const LandingPage = props => {
 					slidesPerView={3}
 					navigation
 					onSlideChange={() => console.log("slide change")}
-					onSwiper={swiper => console.log(swiper)}>
+					onSwiper={swiper => console.log(swiper)}
+					className="custom-swiper">
 					<SwiperSlide>
 						<Card className="custom-cards">
 							<Card.Img variant="top" src={img_card} />

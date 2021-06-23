@@ -4,43 +4,65 @@ const getState = ({ getStore, getActions, setStore }) => {
 			token: "",
 			testResultMessage: "",
 			agendado: "",
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			]
+			user: [],
+			professional: []
 		},
 		actions: {
-			// Use getActions to call a function within a fuction
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
+			create_user: async (name, last_name, email, password) => {
+				try {
+					let response = await ("http://192.168.42.161:3000/sign_up",
+					{
+						method: "POST",
+						headers: {
+							"Content-Type": "application/JSON"
+						},
+						body: JSON.stringify({
+							name,
+							last_name,
+							email,
+							password
+						})
+					});
+					if (response.ok) {
+						return true;
+					} else {
+						console.log(`error: ${response.status} ${response.statusText}`);
+					}
+				} catch (error) {
+					console.log("something failed");
+					console.log(error);
+				}
+				return false;
 			},
-			loadSomeData: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
-			},
-			changeColor: (index, color) => {
-				//get the store
-				const store = getStore();
 
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
-				});
-
-				//reset the global store
-				setStore({ demo: demo });
+			create_professional: async (name, last_name, email, password) => {
+				try {
+					let response = await ("http://192.168.42.161:3000/sign_up_profesional",
+					{
+						method: "POST",
+						headers: {
+							"Content-Type": "application/JSON"
+						},
+						body: JSON.stringify({
+							name,
+							last_name,
+							email,
+							password,
+							is_verified: true
+						})
+					});
+					if (response.ok) {
+						return true;
+					} else {
+						console.log(`error: ${response.status} ${response.statusText}`);
+					}
+				} catch (error) {
+					console.log("something failed");
+					console.log(error);
+				}
+				return false;
 			},
+
 			log_in: async (email, password) => {
 				let response = await fetch("http://192.168.42.161:3000/log-in", {
 					method: "POST",
@@ -64,6 +86,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 				return false;
 			},
+
 			log_out: () => {
 				setStore({
 					token: "",
@@ -72,6 +95,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				localStorage.removeItem("token");
 				localStorage.removeItem("user");
 			},
+
 			setToken: (token, user) => {
 				setStore({
 					token,
@@ -81,6 +105,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// getDataTest: data => {
 			// 	console.log(data);
 			// },
+
 			resultTest: data => {
 				let pond =
 					parseInt(data.Question1) +
@@ -91,16 +116,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 				let result;
 
 				if (pond >= 5 && pond <= 10) {
-					result = "Actualmente tu salud mental esta excelente!! 🎉";
+					result = "Actualmente tu salud mental está excelente!! 🎉";
 					setStore({ testResultMessage: result });
 				} else if (pond >= 11 && pond <= 15) {
-					result = "Hemos decetato altos nieveles de Estre 👀";
+					result = "Hemos detectado altos niveles de Estrés 👀";
 					setStore({ testResultMessage: result });
 				} else {
-					result = "Necesitas ayuda, no estas bien 🙇‍♂️";
+					result = "Necesitas ayuda, no estás bien 🙇🏻‍♂️";
 					setStore({ testResultMessage: result });
 				}
 			},
+
 			sendDateDay: async data => {
 				let response = await fetch("http://192.168.42.161:3000/8/dates", {
 					method: "POST",

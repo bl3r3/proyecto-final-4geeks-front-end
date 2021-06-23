@@ -4,6 +4,7 @@
 }
 
 /*****************Características del formulario*****************/
+
 .custom-form{
     width: 500px;
 }
@@ -19,13 +20,21 @@
     width: 120px;
     background-color: white;
     border: none;
-}
 
-.custom-btn:hover{
-    font-size: 0.9rem;
-    color: #1c3f88 !important;
-    background-color: transparent !important;
-    border: 1px solid #1c3f88;
-    border-radius:30px !important;
-    transition: ease-in .1s;
+    &:hover{
+        font-size: 0.9rem;
+        color: #1c3f88 !important;
+        background-color: transparent !important;
+        border: 1px solid #1c3f88;
+        border-radius:30px !important;
+        transition: ease-in .1s;
+    }
+
+    &:focus{
+        font-size: 0.9rem;
+        color: #ffffff !important;
+        background-color: green !important;
+        border-radius:30px !important;
+        transition: ease-in .1s;
+    }
 }

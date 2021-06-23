@@ -1,0 +1,103 @@
+/*****************Características de: container, row, col*****************/
+
+html, body, #app, #app>div {
+    height: 100%
+}
+
+.tools-container{
+    margin-top: 25px;
+    height: 100%;
+}
+
+.tools-row{
+    display: flex;
+    justify-content: center;
+    height: 60%;
+}
+
+.align-column-items{
+    height: 90%;
+}
+
+/*****************Características de: cards, buttons*****************/
+
+.toolCards{
+    font-weight: lighter;
+    background: rgba(255, 255, 255, 0.219);
+    height: 100%;
+    width: 270px;
+    overflow-y: auto;
+    justify-content: start;
+    flex: 1 1 auto !important;
+    margin-right: 5px;
+}
+
+.titleToolCards{
+    background-color: #1c3e88;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    text-align: left;
+}
+
+.spaceBetweenCards{
+    padding: 9px 9px 0px 9px;
+    border-radius: 10px;
+    flex: none;
+    background-color: transparent;
+}
+
+.outerCard{
+    background-color: transparent;
+    border-color: transparent;
+
+}
+
+.columnCardBody{
+    background: #ffffffd0;
+    border-radius: 10px;
+    height: fit-content;
+    font-size: 14px;
+}
+
+.columnCardTitle{
+    font-weight: bold;
+}
+
+.tool-button:hover{
+    text-decoration: none;
+}
+
+/*****************Características de la bitácora*****************/
+
+.align-column-items2{
+    height: 50%;
+}
+
+.toolCards2{
+    font-weight: lighter;
+    background: rgba(255, 255, 255, 0.219);
+    height: 100%;
+    width: 100%;
+}
+
+.logbook{
+    background-color: transparent;
+    border-color: transparent;
+}
+
+input{
+    width: 100%;
+}
+
+ul{
+    padding: 1rem;
+}
+
+li{
+    width: 100%;
+    list-style: none;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import { Context } from "../store/appContext";
-import { Container, Row, Form, Button } from "react-bootstrap";
+import { Container, Form, Button } from "react-bootstrap";
 import "../../styles/signup.scss";
 
 export const Login = () => {
@@ -40,7 +40,7 @@ export const Login = () => {
 					onClick={async e => {
 						let result = await actions.log_in(email, password);
 						if (result) {
-							history.push("/demo");
+							history.push("/dashboard");
 						} else {
 							alert("El correo y/o la contraseña son incorrectos...");
 						}

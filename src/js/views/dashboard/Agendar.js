@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { FormAgendar } from "../component/FormAgendar";
+import { FormAgendar } from "../../component/FormAgendar";
 import { useParams } from "react-router-dom";
 
 export const Agendar = () => {
