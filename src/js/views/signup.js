@@ -1,21 +1,31 @@
 import React, { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
-
+import { Context } from "../store/appContext";
+import { useForm } from "react-hook-form";
 import "../../styles/signup.scss";
 
 export const Signup = () => {
 	const { store, actions } = useContext(Context);
 	const history = useHistory();
-	const [name, setName] = useState("");
-	const [last_name, setLastName] = useState("");
-	const [email, setEmail] = useState("");
-	const [password, setPassword] = useState("");
+	const {
+		register,
+		handleSubmit,
+		watch,
+		formState: { errors }
+	} = useForm();
+
+	const onSubmit = async data => {
+		let push = await actions.create_user(data);
+		if (push) {
+			history.push("/login");
+		}
+	};
 
 	return (
 		<Container className="d-flex justify-content-center align-items-center vh">
 			<Row>
-				<Form>
+				<Form onSubmit={handleSubmit(onSubmit)}>
 					<Row>
 						<Col>
 							<Form.Group>
@@ -24,8 +34,7 @@ export const Signup = () => {
 									className="custom-input"
 									type="text"
 									placeholder="First name"
-									value={name}
-									onChange={e => setName(e.target.value)}
+									{...register("name")}
 								/>
 							</Form.Group>
 						</Col>
@@ -36,8 +45,7 @@ export const Signup = () => {
 									className="custom-input"
 									type="text"
 									placeholder="Last name"
-									value={last_name}
-									onChange={e => setLastName(e.target.value)}
+									{...register("last_name")}
 								/>
 							</Form.Group>
 						</Col>
@@ -48,8 +56,7 @@ export const Signup = () => {
 							className="custom-input"
 							type="email"
 							placeholder="Enter email"
-							value={email}
-							onChange={e => setEmail(e.target.value)}
+							{...register("email")}
 						/>
 					</Form.Group>
 
@@ -59,22 +66,11 @@ export const Signup = () => {
 							className="custom-input"
 							type="password"
 							placeholder="Password"
-							value={password}
-							onChange={e => setPassword(e.target.value)}
+							{...register("password")}
 						/>
 					</Form.Group>
 
-					<Button
-						className="d-flex justify-content-center ml-auto custom-btn"
-						type="submit"
-						onClick={async e => {
-							let register = await actions.sign_up(name, last_name, email, password);
-							if (register) {
-								history.push("/login");
-							} else {
-								alert("Los datos son incorrectos o ya se encuentra registrado...");
-							}
-						}}>
+					<Button className="d-flex justify-content-center ml-auto custom-btn" type="submit">
 						Submit
 					</Button>
 				</Form>

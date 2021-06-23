@@ -1,12 +1,13 @@
 import React, { useContext } from "react";
 import { useHistory } from "react-router-dom";
-import { Row, Col, Image } from "react-bootstrap";
+import { Row, Col, Image, Button } from "react-bootstrap";
 import { Agendar } from "./Agendar";
 import { Profesionals } from "./Profesionals";
 import { Citas } from "./Citas";
 import { Users } from "./users";
 import { Tools } from "./tools";
 import { Agendado } from "./Agendado";
+import { Context } from "../../store/appContext";
 
 import { BrowserRouter as Router, Switch, Route, Link, useParams, useRouteMatch } from "react-router-dom";
 
@@ -16,7 +17,7 @@ import icon2 from "../../../img/Consulta.png";
 import icon3 from "../../../img/Libro.png";
 
 export const Dashboard = () => {
-	// const { store, actions } = useContext(Context);
+	const { store, actions } = useContext(Context);
 	const history = useHistory();
 	let { path, url } = useRouteMatch();
 	return (
@@ -35,18 +36,13 @@ export const Dashboard = () => {
 					<Link className="custom-link" to={`${path}/users`}>
 						Herramientas
 					</Link>
-					<Link
-					// onClick={async e => {
-					// 	let getout = await actions.log_out();
-					// 	if (getout) {
-					// 		history.push("/home");
-					// 	} else {
-					// 		alert("Houston tenemos un problema.");
-					// 	}
-					// }}
-					>
+					<Button
+						onClick={async e => {
+							actions.log_out();
+							history.push("/login");
+						}}>
 						Log Out
-					</Link>
+					</Button>
 				</div>
 			</Col>
 			<Col md={10}>
