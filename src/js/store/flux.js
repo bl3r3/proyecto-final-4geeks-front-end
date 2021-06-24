@@ -5,7 +5,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 			testResultMessage: "",
 			agendado: "",
 			user: [],
-			professional: []
+			professional: [],
+			diagnosticos: [],
+			ejercicios: []
 		},
 		actions: {
 			create_user: async data => {
@@ -140,111 +142,29 @@ const getState = ({ getStore, getActions, setStore }) => {
 				return false;
 			},
 
-			createReport: async (diagnostic, user_id, exercise_id, profesional_id) => {
-				try {
-					let response = await fetch("http://192.168.42.161:3000/8/dates", {
-						method: "POST",
-						headers: {
-							Authorization: `Bearer ${store.token}`,
-							"Content-Type": "application/JSON"
-						},
-						body: JSON.stringify({
-							diagnostic,
-							user_id,
-							exercise_id,
-							profesional_id
-						})
-					});
-					if (response.ok) {
-						let report = await response.json();
-						return true;
-					} else {
-						console.log(`error: ${response.status} ${response.statusText}`);
-					}
-				} catch (error) {
-					console.log("Error creating report");
-					console.log(error);
-				}
-				return false;
+			createReport: data => {
+				let store = getStore();
+
+				setStore({
+					diagnosticos: [...store.diagnosticos, data]
+				});
 			},
 
-			getReport: async (diagnostic, user_id, exercise_id, profesional_id) => {
-				try {
-					let response = await fetch("http://192.168.42.161:3000/8/dates", {
-						method: "GET",
-						headers: {
-							"Content-Type": "application/JSON"
-						},
-						body: JSON.stringify({
-							diagnostic,
-							user_id,
-							exercise_id,
-							profesional_id
-						})
-					});
-					if (response.ok) {
-						let card = await response.json();
-						return true;
-					} else {
-						console.log(`error: ${response.status} ${response.statusText}`);
-					}
-				} catch (error) {
-					console.log("Error getting report");
-					console.log(error);
-				}
-				return false;
+			borrarReport: id => {
+				let store = getStore();
+				let filterDiagnosticos = store.diagnosticos.filter((diagnostico, index) => {
+					return id != index;
+				});
+				setStore({ diagnosticos: filterDiagnosticos });
 			},
 
-			createExercise: async (description, status) => {
-				try {
-					let response = await fetch("http://192.168.42.161:3000/8/dates", {
-						method: "POST",
-						headers: {
-							Authorization: `Bearer ${store.token}`,
-							"Content-Type": "application/JSON"
-						},
-						body: JSON.stringify({
-							description,
-							status
-						})
-					});
-					if (response.ok) {
-						let exercise = await response.json();
-						return true;
-					} else {
-						console.log(`error: ${response.status} ${response.statusText}`);
-					}
-				} catch (error) {
-					console.log("Error creating exercise");
-					console.log(error);
-				}
-				return false;
-			},
+			createExercise: data => {
+				let store = getStore();
 
-			getExercise: async (description, status) => {
-				try {
-					let response = await fetch("http://192.168.42.161:3000/8/dates", {
-						method: "GET",
-						headers: {
-							"Content-Type": "application/JSON"
-						},
-						body: JSON.stringify({
-							description,
-							status
-						})
-					});
-					if (response.ok) {
-						let card2 = await response.json();
-						return true;
-					} else {
-						console.log(`error: ${response.status} ${response.statusText}`);
-					}
-				} catch (error) {
-					console.log("Error getting exercise");
-					console.log(error);
-				}
-				return false;
-			},
+				setStore({
+					ejercicios: [...store.ejercicios, data]
+				});
+			}
 		}
 	};
 };

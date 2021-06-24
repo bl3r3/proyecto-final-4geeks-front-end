@@ -1,30 +1,57 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { Container, Row, Col, Card, Modal } from "react-bootstrap";
+import React, { useState, useContext } from "react";
+import { Link, useParams } from "react-router-dom";
+import { Context } from "../../store/appContext";
+import { useForm } from "react-hook-form";
+import { Container, Row, Col, Card, Modal, Form, Button } from "react-bootstrap";
 
 import "../../../styles/tools.scss";
 
 export const Tools = props => {
-	const [exercises, setExercises] = useState([]);
-	const [newExercise, setNewExercise] = useState("");
+	const { store, actions } = useContext(Context);
+
 	const [modalShow, setModalShow] = React.useState(false);
 
-	const [items, setItems] = useState([]);
-	const [newItem, setNewItem] = useState("");
+	// const { register, handleSubmit } = useForm();
+
+	let userId = useParams();
+
+	const diagnostico = store.diagnosticos[parseInt(userId.id)];
+
+	const [actividades, setActividades] = useState({
+		ejercicio: "",
+		descripcion: "",
+		paciente: diagnostico.paciente
+	});
+
+	const handleActivity = e => {
+		setActividades({
+			...actividades,
+			[e.target.name]: e.target.value
+		});
+	};
+
+	const handleSubmit = e => {
+		e.preventDefault();
+		// setActividades({
+		// 	...actividades,
+		// 	paciente: diagnostico.paciente
+		// });
+		actions.createExercise(actividades);
+	};
+
+	console.log(diagnostico);
 
 	return (
 		<Container className="tools-container">
 			<Row className="tools-row">
 				<Col md={4} className="align-column-items">
 					<Card className="toolCards">
-						<Card.Header className="titleToolCards">Diagnóstico</Card.Header>
+						<Card.Header className="titleToolCards"></Card.Header>
 						<Card.Body className="spaceBetweenCards">
 							<Card className="outerCard">
 								<Card.Body className="columnCardBody">
-									<Card.Title className="columnCardTitle">Paciente</Card.Title>
-									<Card.Text>
-										Contrary to popular belief, Lorem Ipsum is not simply random text.
-									</Card.Text>
+									<Card.Title className="columnCardTitle">{diagnostico.paciente}</Card.Title>
+									<Card.Text>{diagnostico.diagnostico}</Card.Text>
 								</Card.Body>
 							</Card>
 						</Card.Body>
@@ -39,21 +66,20 @@ export const Tools = props => {
 							</Link>
 						</Card.Header>
 						<Card.Body className="spaceBetweenCards">
-							{exercises.map(exercise => (
-								<Card className="outerCard" key={exercise.id}>
+							{store.ejercicios.map((ejercicio, index) => (
+								<Card className="outerCard" key={index}>
 									<Card.Body className="columnCardBody">
-										<Card.Title className="columnCardTitle">{exercise.title}</Card.Title>
-										<Card.Text>
-											Contrary to popular belief, Lorem Ipsum is not simply random text.
-										</Card.Text>
+										<Card.Title className="columnCardTitle">{ejercicio.ejercicio}</Card.Title>
+										<Card.Text>{ejercicio.descripcion}</Card.Text>
 										<div className="d-flex justify-content-md-between">
 											<Link>✔</Link>
 											<Link
 												className="tool-button"
-												onClick={e => {
-													let filterExercises = exercises.filter(e => e.id != exercise.id);
-													setExercises(filterExercises);
-												}}>
+												// onClick={e => {
+												// 	let filterExercises = exercises.filter(e => e.id != exercise.id);
+												// 	setExercises(filterExercises);
+												// }}
+											>
 												✖
 											</Link>
 										</div>
@@ -69,40 +95,14 @@ export const Tools = props => {
 						<Card.Body className="spaceBetweenCards">
 							<Card className="outerCard">
 								<Card.Body className="columnCardBody">
-									<Card.Title className="columnCardTitle">Ejercicio 1</Card.Title>
-									<Card.Text>
-										Contrary to popular belief, Lorem Ipsum is not simply random text.
-									</Card.Text>
-								</Card.Body>
-							</Card>
-						</Card.Body>
-						<Card.Body className="spaceBetweenCards">
-							<Card className="outerCard">
-								<Card.Body className="columnCardBody">
-									<Card.Title className="columnCardTitle">Ejercicio 2</Card.Title>
-									<Card.Text>
-										Contrary to popular belief, Lorem Ipsum is not simply random text.
-									</Card.Text>
-								</Card.Body>
-							</Card>
-						</Card.Body>
-						<Card.Body className="spaceBetweenCards">
-							<Card className="outerCard">
-								<Card.Body className="columnCardBody">
-									<Card.Title className="columnCardTitle">Ejercicio 3</Card.Title>
-									<Card.Text>
-										Contrary to popular belief, Lorem Ipsum is not simply random text.
-									</Card.Text>
-								</Card.Body>
-							</Card>
-						</Card.Body>
-						<Card.Body className="spaceBetweenCards">
-							<Card className="outerCard">
-								<Card.Body className="columnCardBody">
-									<Card.Title className="columnCardTitle">Ejercicio 4</Card.Title>
-									<Card.Text>
-										Contrary to popular belief, Lorem Ipsum is not simply random text.
-									</Card.Text>
+									{/* {store.getExercise.status.map((newExercise2, index) => {
+										if (newExercise2.status == true) {
+											// return (
+											// 	// <Card.Title key={index} className="columnCardTitle">g</Card.Title>
+											// 	// <Card.Text>g</Card.Text>
+											// );
+										}
+									})} */}
 								</Card.Body>
 							</Card>
 						</Card.Body>
@@ -110,7 +110,7 @@ export const Tools = props => {
 				</Col>
 
 				<Modal
-					size="md"
+					size="xl"
 					aria-labelledby="contained-modal-title-vcenter"
 					centered
 					show={modalShow}
@@ -119,85 +119,24 @@ export const Tools = props => {
 						<Modal.Title id="contained-modal-title-vcenter">Agregue una actividad:</Modal.Title>
 					</Modal.Header>
 					<Modal.Body>
-						<input
-							placeholder="Nombre del ejercicio"
-							value={newExercise}
-							onChange={e => {
-								setNewExercise(e.target.value);
-							}}
-							onKeyPress={e => {
-								if (e.key == "Enter") {
-									if (e.target.value.trim() != "") {
-										setExercises([
-											...exercises,
-											{
-												id: Math.random()
-													.toString(16)
-													.substring(2),
-												title: newExercise
-											}
-										]);
-										setNewExercise("");
-									} else {
-										alert("El campo no puede estar vacío");
-									}
-								}
-							}}
-						/>
+						<Form onSubmit={handleSubmit}>
+							<input
+								className="form-control"
+								placeholder="Ejercicio"
+								name="ejercicio"
+								onChange={handleActivity}
+							/>
+							<input
+								className="form-control"
+								placeholder="Descripción"
+								name="descripcion"
+								onChange={handleActivity}
+							/>
+
+							<Button type="submit">Crear</Button>
+						</Form>
 					</Modal.Body>
 				</Modal>
-			</Row>
-			<Row className="d-flex justify-content-center">
-				<Col className="d-flex justify-content-center align-column-items2">
-					<Card className="toolCards2">
-						<Card.Header className="titleToolCards">Bitácora</Card.Header>
-						<Card.Body className="spaceBetweenCards">
-							<Card className="logbook">
-								<Card.Body className="columnCardBody">
-									<input
-										className="form-control"
-										placeholder="Aquí puedes anotar tus pensamientos."
-										value={newItem}
-										onChange={e => setNewItem(e.target.value)}
-										onKeyPress={e => {
-											if (e.key == "Enter") {
-												if (e.target.value.trim() != "") {
-													setItems([
-														...items,
-														{
-															id: Math.random()
-																.toString(16)
-																.substring(2),
-															label: newItem
-														}
-													]);
-													setNewItem("");
-												} else {
-													alert("El campo no puede estar vacío");
-												}
-											}
-										}}
-									/>
-									<ul>
-										{items.map(item => (
-											<li key={item.id}>
-												{item.label}
-												<Link
-													className="tool-button"
-													onClick={e => {
-														let filterItems = items.filter(i => i.id != item.id);
-														setItems(filterItems);
-													}}>
-													✖
-												</Link>
-											</li>
-										))}
-									</ul>
-								</Card.Body>
-							</Card>
-						</Card.Body>
-					</Card>
-				</Col>
 			</Row>
 		</Container>
 	);

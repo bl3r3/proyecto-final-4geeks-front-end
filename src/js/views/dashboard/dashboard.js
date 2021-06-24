@@ -66,7 +66,7 @@ export const Dashboard = () => {
 					<Route path="/dashboard/users">
 						<Users />
 					</Route>
-					<Route path="/dashboard/tools">
+					<Route path="/dashboard/tools/:id">
 						<Tools />
 					</Route>
 				</Switch>
