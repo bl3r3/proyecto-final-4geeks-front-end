@@ -6,13 +6,10 @@ import { LandingPage } from "./views/home";
 import { Signup } from "./views/Signup";
 import { SignupProfesional } from "./views/SignUpProfesional";
 import { Login } from "./views/Login";
-import { UserTest } from "./views/test/UserTest";
+import { Test } from "./views/test/Test";
 import { Dashboard } from "./views/dashboard/dashboard";
 import { Blog } from "./views/blog";
 import injectContext from "./store/appContext";
-
-import { Menu } from "./component/navbar";
-import { Footer } from "./component/footer";
 
 //create your first component
 const Layout = () => {
@@ -24,7 +21,6 @@ const Layout = () => {
 		<div>
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
-					{/* <Menu /> */}
 					<Switch>
 						<Route path="/dashboard">
 							<Dashboard />
@@ -32,17 +28,17 @@ const Layout = () => {
 						<Route exact path="/signup">
 							<Signup />
 						</Route>
-						{/* <Route exact path="/signup/profesional">
-							<Signup2Page />
-						</Route> */}
+						<Route exact path="/signup/profesional">
+							<SignupProfesional />
+						</Route>
 						<Route exact path="/">
 							<LandingPage />
 						</Route>
 						<Route exact path="/login">
 							<Login />
 						</Route>
-						<Route exact path="/UserTest">
-							<UserTest />
+						<Route exact path="/test">
+							<Test />
 						</Route>
 						<Route exact path="/blog">
 							<Blog />
@@ -51,7 +47,6 @@ const Layout = () => {
 							<h1>Not found!</h1>
 						</Route>
 					</Switch>
-					{/* <Footer /> */}
 				</ScrollToTop>
 			</BrowserRouter>
 		</div>

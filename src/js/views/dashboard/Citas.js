@@ -1,11 +1,14 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Card, Container, Row, Col } from "react-bootstrap";
+import { Context } from "../../store/appContext";
 
 export const Citas = () => {
+	const { store, actions } = useContext(Context);
 	const [citas, setCitas] = useState([]);
+	let user_id_store = store.user.id;
 	useEffect(() => {
 		const get_citas = async () => {
-			let response = await fetch("http://192.168.42.161:3000/8/dates");
+			let response = await fetch(`http://192.168.42.161:3000/${user_id_store}/dates`);
 			let result = await response.json();
 			setCitas(result);
 		};
@@ -15,14 +18,15 @@ export const Citas = () => {
 	return (
 		<Container fluid>
 			<Row>
-				<Col>
-					<h2 className="text-center my-3">Citas</h2>
+				<Col className="text-center my-3">
+					<h2>Citas</h2>
+					<h3>Estas son tus citas:</h3>
 				</Col>
 			</Row>
 			<Row>
 				{citas.map((cita, i) => (
 					<Col md={3} key={i}>
-						<Card style={{ width: "20rem" }}>
+						<Card className="card-style">
 							<Card.Body>
 								<Card.Title>
 									Medico: {cita.profesional.name} {cita.profesional.last_name}

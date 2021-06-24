@@ -72,7 +72,7 @@ export const FormAgendar = ({ profesionalId }) => {
 								<option value="Zoom">Zoom</option>
 							</Form.Control>
 						</Form.Group>
-						<Button variant="primary" type="submit">
+						<Button variant="primary" type="submit" className="btn-agendar">
 							Agendar
 						</Button>
 					</Form>
