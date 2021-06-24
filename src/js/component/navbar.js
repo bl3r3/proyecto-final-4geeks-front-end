@@ -5,7 +5,7 @@ import "../../styles/navbar.scss";
 export const Menu = () => {
 	return (
 		<Navbar className="nav-height" collapseOnSelect expand="lg">
-			<Navbar.Brand className="custom-brand-link" href="#home">
+			<Navbar.Brand className="custom-brand-link" href="/">
 				MindCare
 			</Navbar.Brand>
 			<Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -19,7 +19,7 @@ export const Menu = () => {
 					</Nav.Link>
 					<NavDropdown className="nav-sign-up" title="Sign up" id="collasible-nav-dropdown">
 						<NavDropdown.Item href="/signup">Paciente</NavDropdown.Item>
-						<NavDropdown.Item href="/signup2">Médico</NavDropdown.Item>
+						<NavDropdown.Item href="/signup/profesional">Médico</NavDropdown.Item>
 					</NavDropdown>
 				</Nav>
 			</Navbar.Collapse>

@@ -31,21 +31,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 				return false;
 			},
 
-			create_professional: async (name, last_name, email, password) => {
+			create_professional: async data => {
 				try {
-					let response = await ("http://192.168.42.161:3000/sign_up_profesional",
-					{
+					let response = await fetch("http://192.168.42.161:3000/sign-up-profesional", {
 						method: "POST",
+						body: JSON.stringify(data),
 						headers: {
-							"Content-Type": "application/JSON"
-						},
-						body: JSON.stringify({
-							name,
-							last_name,
-							email,
-							password,
-							is_verified: true
-						})
+							"Content-Type": "application/json"
+						}
 					});
 					if (response.ok) {
 						return true;
@@ -58,7 +51,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 				return false;
 			},
-
 			log_in: async data => {
 				let response = await fetch("http://192.168.42.161:3000/log-in", {
 					method: "POST",

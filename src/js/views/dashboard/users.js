@@ -15,8 +15,6 @@ export const Users = () => {
 
 	const onSubmit = data => actions.createReport(data);
 
-	console.log(store);
-
 	return (
 		<Container className="dash-container">
 			<Row className="dash-row">

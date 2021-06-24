@@ -19,7 +19,8 @@ export const Profesionals = () => {
 			<Container fluid>
 				<Row>
 					<Col>
-						<h2 className="text-center my-3">Profesionals</h2>
+						<h2 className="text-center my-3">Psicologos</h2>
+						<h3 className="text-center my-3">Estos son los psicologos disponibles actualmente</h3>
 					</Col>
 				</Row>
 				<Row>

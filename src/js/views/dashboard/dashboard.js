@@ -37,11 +37,12 @@ export const Dashboard = () => {
 						Herramientas
 					</Link>
 					<Button
+						className="btn-danger btn-cerrar-sesion mt-5"
 						onClick={async e => {
 							actions.log_out();
 							history.push("/login");
 						}}>
-						Log Out
+						Cerrar sesión
 					</Button>
 				</div>
 			</Col>
