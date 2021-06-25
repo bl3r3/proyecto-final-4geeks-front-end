@@ -1,0 +1,89 @@
+/*****************Características del footer principal*****************/
+.custom-footer{
+    background-color: rgba(255, 255, 255, 0.24);
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-paragraph{
+    margin-left: 50px;
+}
+
+.custom-footer-title{
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 15px;
+}
+
+.custom-footer-title2{
+    margin-left: 15px;
+    margin-top: 8px;
+}
+
+.custom-icons-block{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin-left: 200px;
+}
+
+.custom-icons{
+    color: rgb(128, 127, 127);
+    font-size: 2rem;
+    background-color: transparent;
+    width: 60px;
+    border: transparent;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+.custom-icons:hover{
+    color: rgb(11, 148, 202);
+    background-color: transparent;
+    border: transparent;
+}
+
+.custom-anchor-block{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin-left: 200px;
+}
+
+.custom-brand-title{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.custom-anchor{
+    color: rgb(0, 0, 0);
+    font-weight: lighter;
+    margin-bottom: 20px;
+}
+
+.custom-anchor:hover{
+    color: black;
+}
+/*****************Características del footer secundario*****************/
+.footer-block{
+    color: white;
+    text-align: center;
+    background-color: #1c3f88;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-anchor2{
+    color: rgb(255, 255, 255);
+    font-weight: lighter;
+    margin-right: 20px;
+}
+
+.custom-anchor2:hover{
+    color: white;
+}

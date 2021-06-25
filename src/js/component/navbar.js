@@ -1,17 +1,28 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import "../../styles/navbar.scss";
 
-export const Navbar = () => {
+export const Menu = () => {
 	return (
-		<nav className="navbar navbar-light bg-light mb-3">
-			<Link to="/">
-				<span className="navbar-brand mb-0 h1">React Boilerplate</span>
-			</Link>
-			<div className="ml-auto">
-				<Link to="/demo">
-					<button className="btn btn-primary">Check the Context in action</button>
-				</Link>
-			</div>
-		</nav>
+		<Navbar className="nav-height" collapseOnSelect expand="lg">
+			<Navbar.Brand className="custom-brand-link" href="/">
+				MindCare
+			</Navbar.Brand>
+			<Navbar.Toggle aria-controls="responsive-navbar-nav" />
+			<Navbar.Collapse id="responsive-navbar-nav">
+				<Nav className="ml-auto all-custom-nav-links">
+					<Nav.Link href="/test" className="custom-nav-link">
+						TEST
+					</Nav.Link>
+					<Nav.Link href="/login" className="custom-nav-link">
+						SIGN IN
+					</Nav.Link>
+					<NavDropdown className="nav-sign-up" title="Sign up" id="collasible-nav-dropdown">
+						<NavDropdown.Item href="/signup">Paciente</NavDropdown.Item>
+						<NavDropdown.Item href="/signup/profesional">Médico</NavDropdown.Item>
+					</NavDropdown>
+				</Nav>
+			</Navbar.Collapse>
+		</Navbar>
 	);
 };

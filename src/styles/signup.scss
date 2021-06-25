@@ -1,0 +1,41 @@
+/*****************Características del container*****************/
+.vh{
+    height:70vh;
+}
+
+/*****************Características del formulario*****************/
+
+.custom-form{
+    width: 500px;
+}
+
+.custom-input{
+    border-radius: 20px;
+}
+
+.custom-btn{
+    font-size: 1.2rem !important;
+    color: gray;
+    border-radius: 20px;
+    width: 120px;
+    background-color: white;
+    border: none;
+
+    &:hover{
+        font-size: 0.9rem;
+        color: #1c3f88 !important;
+        background-color: transparent !important;
+        border: 1px solid #1c3f88;
+        border-radius:30px !important;
+        transition: ease-in .1s;
+    }
+
+    &:focus{
+        font-size: 0.9rem;
+        color: #ffffff !important;
+        background-color: green !important;
+        border-radius:30px !important;
+        transition: ease-in .1s;
+    }
+}
+

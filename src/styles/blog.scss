@@ -1,0 +1,41 @@
+.titleBlog{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.custom-center-column{
+    border-radius: 0 !important;
+    margin-bottom: 20px;
+}
+
+.titleBlog2{
+    font-size: 1.5rem;
+    font-weight: bolder !important;
+}
+
+.custom-center-column2{
+    border-radius: 0 !important;
+    margin-bottom: 120px;
+}
+
+.custom-right-column{
+    background-color: rgba(255, 255, 255, 0.219);
+    height: 500px;
+}
+
+
+
+.right-column-button{
+    background-color: #1c3f88;
+    border: transparent;
+
+    &:hover{
+        background-color: white;
+        color: black;
+    }
+
+    &:focus{
+        background-color: white;
+        color: black;
+    }
+}

@@ -1,0 +1,137 @@
+/*****************Características de: container, row, col*****************/
+
+html, body, #app, #app>div {
+    height: 100%
+}
+
+.tools-container{
+    margin-top: 25px;
+    height: 100%;
+}
+
+.tools-row{
+    display: flex;
+    justify-content: center;
+    height: 90%;
+}
+
+.align-column-items{
+    height: 90%;
+}
+
+/*****************Características de: cards, buttons*****************/
+
+.toolCards{
+    font-weight: lighter;
+    background: rgba(255, 255, 255, 0.219);
+    height: 100%;
+    width: 270px;
+    overflow-y: auto;
+    justify-content: start;
+    flex: 1 1 auto !important;
+    margin-right: 5px;
+    border-radius: 0px !important;
+}
+
+.titleToolCards{
+    background-color: #1c3e88;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    text-align: left;
+}
+
+.spaceBetweenCards{
+    padding: 9px 9px 0px 9px;
+    border-radius: 10px;
+    flex: none;
+    background-color: transparent;
+}
+
+.outerCard{
+    background-color: transparent;
+    border-color: transparent;
+
+}
+
+.columnCardBody{
+    background: #ffffffd0;
+    border-radius: 10px;
+    height: fit-content;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.columnCardTitle{
+    font-weight: bold;
+}
+
+.tool-button{
+    text-decoration: none;
+    background-color: transparent;
+    border-color: transparent;
+    color: #1c3f88;
+    font-weight: bolder;
+
+    &:hover{
+        text-decoration: none;
+        background-color: transparent;
+        border-color: transparent;
+        color: #1c3f88;
+        font-weight: bolder;
+    }
+}
+
+/*****************Características de la bitácora*****************/
+
+.align-column-items2{
+    height: 50%;
+}
+
+.toolCards2{
+    font-weight: lighter;
+    background: rgba(255, 255, 255, 0.219);
+    height: 100%;
+    width: 100%;
+}
+
+.logbook{
+    background-color: transparent;
+    border-color: transparent;
+}
+
+input{
+    width: 100%;
+}
+
+ul{
+    padding: 1rem;
+}
+
+li{
+    width: 100%;
+    list-style: none;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+}
+
+.custom-modal2{
+    height: 190px;
+}
+
+.form-control-modal2{
+    margin-bottom: 15px;
+}
+
+.custom-btn-modal2{
+    font-size: 1.2rem !important;
+    color: white;
+    border-radius: 10px;
+    background-color: #1c3f88 !important;
+    border: none;
+
+    &:focus{
+        border: none;
+    }
+}

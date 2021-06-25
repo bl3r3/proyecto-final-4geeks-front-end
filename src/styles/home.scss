@@ -1,0 +1,141 @@
+/*****************Características del container*****************/
+.vh{
+    height:100vh;
+}
+/*****************Características del primer bloque*****************/
+img{
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.custom-title{
+    font-size: 3rem;
+}
+
+.custom-title2{
+    font-size: 5rem;
+    font-weight: bolder;
+}
+
+.btn-section{
+    width:100%;
+    height:100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.test-btn{
+    background: #1c3f88;
+    border: 2px solid #1c3f88;
+    color: white;
+    font-size: 1.3rem;
+    width: 150px;
+    border-radius: 30px;
+    padding: 5px;
+}
+
+.test-btn:hover{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #1c3f88 !important;
+    background-color: transparent !important;
+    border: 1px solid #1c3f88;
+    border-radius:30px !important;
+    transition: ease-in .1s;
+}
+
+.sign-in-btn{
+    background-color: transparent;
+    border: 2px solid #1c3f88;
+    color: #1c3f88;
+    font-size: 1.3rem;
+    font-weight: bold;
+    width: 150px;
+    border-radius: 30px;
+    padding: 5px;
+
+    &:hover{
+        color: rgb(11, 148, 202) !important;
+        border-color: rgb(11, 148, 202) !important;
+    }
+}
+
+/*****************Características del segundo bloque*****************/
+.custom-title3{
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.custom-image{
+    width: 180px;
+    height: 180px;
+}
+
+.custom-cards-group{
+    text-align: center;
+    background-color: transparent;
+    border-style: none;
+}
+
+.custom-left-card{
+    width: 360px;
+    height: 580px;
+    margin: 60px 0 60px 180px;
+    background-color: rgba(255, 255, 255, 0.219);
+    color: rgb(0, 0, 0);
+}
+
+.custom-title4{
+    font-size: 2rem;
+}
+
+.custom-list-group{
+    background-color: transparent;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.number-block{
+    color: white;
+    background-color: #1c3f88;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+/*****************Características del tercer bloque*****************/
+.custom-title5{
+    margin-top: 60px;
+    margin-bottom: 80px;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.custom-swiper{
+    margin-bottom: 140px;
+}
+
+
+.custom-cards{
+    border-radius: 0px !important;
+    background-color: rgba(255, 255, 255, 0.219);
+    width: 300px;
+    height: 550px;
+    margin-left: 47px;
+
+    &:hover{
+        box-shadow: 5px 8px 10px 5px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 5px 08px 20px 1px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 5px 08px 20px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px;
+    }
+    
+}
+
+.btn-see-more:hover{
+    text-decoration: none;
+}

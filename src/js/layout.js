@@ -2,13 +2,14 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
-import { Home } from "./views/home";
-import { Demo } from "./views/demo";
-import { Single } from "./views/single";
+import { LandingPage } from "./views/home";
+import { Signup } from "./views/signup";
+import { SignupProfesional } from "./views/SignUpProfesional";
+import { Login } from "./views/Login";
+import { Test } from "./views/test/test";
+import { Dashboard } from "./views/dashboard/dashboard";
+import { Blog } from "./views/blog";
 import injectContext from "./store/appContext";
-
-import { Navbar } from "./component/navbar";
-import { Footer } from "./component/footer";
 
 //create your first component
 const Layout = () => {
@@ -17,25 +18,35 @@ const Layout = () => {
 	const basename = process.env.BASENAME || "";
 
 	return (
-		<div className="d-flex flex-column">
+		<div>
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
-					<Navbar />
 					<Switch>
+						<Route path="/dashboard">
+							<Dashboard />
+						</Route>
+						<Route exact path="/signup">
+							<Signup />
+						</Route>
+						<Route exact path="/signup/profesional">
+							<SignupProfesional />
+						</Route>
 						<Route exact path="/">
-							<Home />
+							<LandingPage />
 						</Route>
-						<Route exact path="/demo">
-							<Demo />
+						<Route exact path="/login">
+							<Login />
 						</Route>
-						<Route exact path="/single/:theid">
-							<Single />
+						<Route exact path="/test">
+							<Test />
+						</Route>
+						<Route exact path="/blog">
+							<Blog />
 						</Route>
 						<Route>
 							<h1>Not found!</h1>
 						</Route>
 					</Switch>
-					<Footer />
 				</ScrollToTop>
 			</BrowserRouter>
 		</div>
