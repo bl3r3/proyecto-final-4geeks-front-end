@@ -33,11 +33,11 @@ export const LandingPage = () => {
 			<Container className="">
 				<Row className="d-flex justify-content-center align-items-center">
 					<Col md={5} center>
-						<h1 className="custom-title">NEED SOME</h1>
-						<h2 className="custom-title2">HELP?</h2>
-						<h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h3>
+						<h1 className="custom-title">NECESITAS</h1>
+						<h2 className="custom-title2">AYUDA?</h2>
+						<h3>Servicios de psicología para pacientes y psicólogos</h3>
 						<div className="btn-section">
-							<Link to="/UserTest">
+							<Link to="/test">
 								<button className="test-btn">GO TEST</button>
 							</Link>
 							<Link to="/dashboard">
@@ -124,11 +124,11 @@ export const LandingPage = () => {
 								<Card.Body>
 									<Card.Title>Meditación</Card.Title>
 									<Card.Text>
-										Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
-										in a piece of classical Latin literature from 45 BC, making it over 2000 years
-										old..{" "}
+										En su esencia, la meditación es un ejercicio mental con el que, a través de la
+										atención, entrenamos nuestra mente para llevarla a un estado de paz, calma y
+										serenidad interior.
 									</Card.Text>
-									<Button className="d-flex ml-auto" variant="light">
+									<Button className="d-flex ml-auto btn-see-more" variant="light">
 										Leer más
 									</Button>
 								</Card.Body>
@@ -143,16 +143,16 @@ export const LandingPage = () => {
 								<Card.Body>
 									<Card.Title>Respiración</Card.Title>
 									<Card.Text>
-										Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
-										in a piece of classical Latin literature from 45 BC, making it over 2000 years
-										old..{" "}
+										Los psicólogos recomiendan la respiración diafragmática como una de las técnicas
+										más efectivas para liberar estrés, apaciguar estados emocionales, y regular la
+										ansiedad.
 									</Card.Text>
 									<Button className="d-flex ml-auto" variant="light">
 										Leer más
 									</Button>
 								</Card.Body>
 								<Card.Footer>
-									<small className="text-muted">Last updated 3 mins ago</small>
+									<small className="text-muted">Last updated a week ago</small>
 								</Card.Footer>
 							</Card>
 						</SwiperSlide>
@@ -162,16 +162,15 @@ export const LandingPage = () => {
 								<Card.Body>
 									<Card.Title>Concentración</Card.Title>
 									<Card.Text>
-										Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
-										in a piece of classical Latin literature from 45 BC, making it over 2000 years
-										old..{" "}
+										La concentración mental es la capacidad que tenemos los humanos para fijar
+										nuestra atención sobre una actividad, objeto o idea sin ninguna distracción.
 									</Card.Text>
 									<Button className="d-flex ml-auto" variant="light">
 										Leer más
 									</Button>
 								</Card.Body>
 								<Card.Footer>
-									<small className="text-muted">Last updated 3 mins ago</small>
+									<small className="text-muted">Last updated 2 weeks ago</small>
 								</Card.Footer>
 							</Card>
 						</SwiperSlide>
@@ -181,16 +180,15 @@ export const LandingPage = () => {
 								<Card.Body>
 									<Card.Title>Comunicación</Card.Title>
 									<Card.Text>
-										Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
-										in a piece of classical Latin literature from 45 BC, making it over 2000 years
-										old..{" "}
+										En el caso de las familias la comunicación, además de brindar información, será
+										una forma de conectar y dar a conocer los sentimientos entre sus miembros.
 									</Card.Text>
 									<Button className="d-flex ml-auto" variant="light">
 										Leer más
 									</Button>
 								</Card.Body>
 								<Card.Footer>
-									<small className="text-muted">Last updated 3 mins ago</small>
+									<small className="text-muted">Last updated 3 weeks ago</small>
 								</Card.Footer>
 							</Card>
 						</SwiperSlide>
@@ -200,16 +198,15 @@ export const LandingPage = () => {
 								<Card.Body>
 									<Card.Title>Relajación</Card.Title>
 									<Card.Text>
-										Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
-										in a piece of classical Latin literature from 45 BC, making it over 2000 years
-										old..{" "}
+										Las técnicas de relajación pueden reducir los síntomas del estrés y ayudarte a
+										disfrutar de una mejor calidad de vida, en especial, si padeces una enfermedad.
 									</Card.Text>
-									<Button className="d-flex ml-auto" variant="light">
+									<Button className="d-flex ml-auto btn-see-more" variant="light">
 										Leer más
 									</Button>
 								</Card.Body>
 								<Card.Footer>
-									<small className="text-muted">Last updated 3 mins ago</small>
+									<small className="text-muted">Last updated a month ago</small>
 								</Card.Footer>
 							</Card>
 						</SwiperSlide>
@@ -219,18 +216,17 @@ export const LandingPage = () => {
 								<Card.Body>
 									<Card.Title>Insomnio</Card.Title>
 									<Card.Text>
-										Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
-										in a piece of classical Latin literature from 45 BC, making it over 2000 years
-										old..{" "}
+										Los casos de insomnio están relacionados con hábitos inadecuados del sueño,
+										depresión, ansiedad, falta de ejercicio, enfermedades crónicas o medicamentos.
 									</Card.Text>
-									<Link to="/blog">
-										<Button className="d-flex ml-auto" variant="light">
+									<Link className="btn-see-more" to="/blog">
+										<Button className="d-flex ml-auto btn-see-more" variant="light">
 											Leer más
 										</Button>
 									</Link>
 								</Card.Body>
 								<Card.Footer>
-									<small className="text-muted">Last updated 3 mins ago</small>
+									<small className="text-muted">Last updated 2 months ago</small>
 								</Card.Footer>
 							</Card>
 						</SwiperSlide>

@@ -32,10 +32,6 @@ export const Tools = props => {
 
 	const handleSubmit = e => {
 		e.preventDefault();
-		// setActividades({
-		// 	...actividades,
-		// 	paciente: diagnostico.paciente
-		// });
 		actions.createExercise(actividades);
 	};
 
@@ -46,7 +42,7 @@ export const Tools = props => {
 			<Row className="tools-row">
 				<Col md={4} className="align-column-items">
 					<Card className="toolCards">
-						<Card.Header className="titleToolCards"></Card.Header>
+						<Card.Header className="titleToolCards">Diagnóstico</Card.Header>
 						<Card.Body className="spaceBetweenCards">
 							<Card className="outerCard">
 								<Card.Body className="columnCardBody">
@@ -66,51 +62,35 @@ export const Tools = props => {
 							</Link>
 						</Card.Header>
 						<Card.Body className="spaceBetweenCards">
-							{store.ejercicios.map((ejercicio, index) => (
-								<Card className="outerCard" key={index}>
-									<Card.Body className="columnCardBody">
-										<Card.Title className="columnCardTitle">{ejercicio.ejercicio}</Card.Title>
-										<Card.Text>{ejercicio.descripcion}</Card.Text>
-										<div className="d-flex justify-content-md-between">
-											<Link>✔</Link>
-											<Link
-												className="tool-button"
-												// onClick={e => {
-												// 	let filterExercises = exercises.filter(e => e.id != exercise.id);
-												// 	setExercises(filterExercises);
-												// }}
-											>
-												✖
-											</Link>
-										</div>
-									</Card.Body>
-								</Card>
-							))}
-						</Card.Body>
-					</Card>
-				</Col>
-				<Col md={4} className="align-column-items">
-					<Card className="toolCards">
-						<Card.Header className="titleToolCards">Progreso</Card.Header>
-						<Card.Body className="spaceBetweenCards">
-							<Card className="outerCard">
-								<Card.Body className="columnCardBody">
-									{/* {store.getExercise.status.map((newExercise2, index) => {
-										if (newExercise2.status == true) {
-											// return (
-											// 	// <Card.Title key={index} className="columnCardTitle">g</Card.Title>
-											// 	// <Card.Text>g</Card.Text>
-											// );
-										}
-									})} */}
-								</Card.Body>
-							</Card>
+							{store.ejercicios
+								.filter(ejercicio => ejercicio.paciente == diagnostico.paciente)
+								.map((ejercicio, index) => {
+									return (
+										<Card className="outerCard" key={index}>
+											<Card.Body className="columnCardBody">
+												<Card.Title className="columnCardTitle">
+													{ejercicio.ejercicio}
+												</Card.Title>
+												<Card.Text>{ejercicio.descripcion}</Card.Text>
+												<div className="d-flex justify-content-md-between">
+													<button
+														className="tool-button"
+														onClick={() => {
+															actions.borrarExercise(index);
+														}}>
+														✖
+													</button>
+												</div>
+											</Card.Body>
+										</Card>
+									);
+								})}
 						</Card.Body>
 					</Card>
 				</Col>
 
 				<Modal
-					size="xl"
+					size="md"
 					aria-labelledby="contained-modal-title-vcenter"
 					centered
 					show={modalShow}
@@ -118,22 +98,23 @@ export const Tools = props => {
 					<Modal.Header closeButton>
 						<Modal.Title id="contained-modal-title-vcenter">Agregue una actividad:</Modal.Title>
 					</Modal.Header>
-					<Modal.Body>
+					<Modal.Body className="custom-modal2">
 						<Form onSubmit={handleSubmit}>
 							<input
-								className="form-control"
+								className="form-control form-control-modal2"
 								placeholder="Ejercicio"
 								name="ejercicio"
 								onChange={handleActivity}
 							/>
 							<input
-								className="form-control"
+								className="form-control form-control-modal2"
 								placeholder="Descripción"
 								name="descripcion"
 								onChange={handleActivity}
 							/>
-
-							<Button type="submit">Crear</Button>
+							<Button className="d-flex ml-auto custom-btn-modal2" type="submit">
+								Crear
+							</Button>
 						</Form>
 					</Modal.Body>
 				</Modal>

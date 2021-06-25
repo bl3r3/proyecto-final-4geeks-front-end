@@ -27,14 +27,14 @@ export const Users = () => {
 									<Card.Text>{diagnostico.diagnostico}</Card.Text>
 									<div className="d-flex justify-content-md-between">
 										<Link to={`/dashboard/tools/${index}`}>Ver</Link>
-										<Link
+										<button
 											to=""
 											className="delete-button"
 											onClick={() => {
 												actions.borrarReport(index);
 											}}>
 											Borrar
-										</Link>
+										</button>
 									</div>
 								</Card.Body>
 							</Card>
@@ -56,15 +56,21 @@ export const Users = () => {
 					<Modal.Header closeButton>
 						<Modal.Title id="contained-modal-title-vcenter">Ingrese el paciente:</Modal.Title>
 					</Modal.Header>
-					<Modal.Body>
+					<Modal.Body className="custom-modal">
 						<Form onSubmit={handleSubmit(onSubmit)}>
 							<input
-								className="form-control"
+								className="form-control form-control-modal"
 								placeholder="Nombre del paciente"
 								{...register("paciente")}
 							/>
-							<input className="form-control" placeholder="Diagnostico" {...register("diagnostico")} />
-							<Button type="submit">Crear</Button>
+							<input
+								className="form-control form-control-modal"
+								placeholder="Diagnóstico"
+								{...register("diagnostico")}
+							/>
+							<Button className="d-flex ml-auto custom-btn-modal" type="submit">
+								Crear
+							</Button>
 						</Form>
 					</Modal.Body>
 				</Modal>

@@ -6,6 +6,7 @@ import { Profesionals } from "./Profesionals";
 import { Citas } from "./Citas";
 import { Users } from "./users";
 import { Tools } from "./tools";
+import { Tools2 } from "./tools2";
 import { Agendado } from "./Agendado";
 import { Context } from "../../store/appContext";
 
@@ -49,8 +50,7 @@ export const Dashboard = () => {
 			<Col md={10}>
 				<Switch>
 					<Route exact path="/dashboard">
-						<h1>hola</h1>
-						<h2>Este es la ruta dashboard</h2>
+						<h3 className="d-flex justify-content-center align-items-center">¡Ups debes iniciar sesión!</h3>
 					</Route>
 					<Route path="/dashboard/agendar/:id">
 						<Agendar />
@@ -64,8 +64,11 @@ export const Dashboard = () => {
 					<Route path="/dashboard/agendado">
 						<Agendado />
 					</Route>
-					<Route path="/dashboard/users">
-						<Users />
+					<Route path="/dashboard/tools">
+						<Tools />
+					</Route>
+					<Route path="/dashboard/tools2">
+						<Tools2 />
 					</Route>
 					<Route path="/dashboard/tools/:id">
 						<Tools />

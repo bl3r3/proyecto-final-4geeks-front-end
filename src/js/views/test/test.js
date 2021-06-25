@@ -39,7 +39,7 @@ export const Test = props => {
 			return undefined;
 		} else if (formStep === 5) {
 			return (
-				<button disabled={!isValid} type="submit" className="btn btn-radius custom-btn-test">
+				<button disabled={!isValid} type="submit" className="btn-radius custom-btn-test">
 					Finalizar Test
 				</button>
 			);
@@ -51,7 +51,7 @@ export const Test = props => {
 							disabled={!isValid}
 							onClick={backTetsStep}
 							type="button"
-							className="btn-radius btn custom-btn">
+							className="btn-radius custom-btn-test">
 							Regresar
 						</button>
 					)}
@@ -59,7 +59,7 @@ export const Test = props => {
 						disabled={!isValid}
 						onClick={completedTetsStep}
 						type="button"
-						className="btn custom-btn-test btn-radius">
+						className="custom-btn-test btn-radius">
 						{formStep === 0 ? "Iniciar test" : "Siguiente"}
 					</button>
 				</div>
@@ -84,18 +84,19 @@ export const Test = props => {
 								<section className={formStep === 0 ? "test-active" : "d-none"}>
 									<div className="w-100">
 										<h1>Bienvenido al Test 📝</h1>
-										<h3>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum
-											condimentum sodales. Class aptent taciti sociosqu ad litora torquent per
-											conubia nostra, per inceptos himenaeos. Donec ultrices tincidunt blandit.
-											Phasellus nec nunc molestie sapien eleifend consequat vel ut nisi.
-										</h3>
+										<h5>
+											Aquí podrás obtener el resultado de tu diagnostico, contestando tan solo
+											algunas preguntas, no te preocupes será muy rápido. Además, esto te podrá
+											permitir conocer un poco más sobre alguna dificultad o situación que
+											presentes, con la intención de que tengas un pre-diagnóstico antes de
+											agendar con un profesional.
+										</h5>
 									</div>
 								</section>
 							)}
 							{formStep >= 1 && (
 								<section className={formStep === 1 ? "test-active" : "d-none"}>
-									<h2>¿Como te has sentido ultimamente 🤔?</h2>
+									<h2 className="titleTest">¿Cómo te has sentido ultimamente 🤔?</h2>
 									<div className="input-test">
 										<input
 											className="check-custom"
@@ -144,7 +145,7 @@ export const Test = props => {
 							)}
 							{formStep >= 2 && (
 								<section className={formStep === 2 ? "test-active" : "d-none"}>
-									<h2>¿Cuantas horas duermes normalmente 🛌?</h2>
+									<h2>¿Cuántas horas duermes normalmente 🛌?</h2>
 									<div className="input-test">
 										<input
 											className="check-custom"
@@ -193,7 +194,7 @@ export const Test = props => {
 							)}
 							{formStep >= 3 && (
 								<section className={formStep === 3 ? "test-active" : "d-none"}>
-									<h2>¿Como te sientes con tu trabajo u oficio actual 👨‍💻?</h2>
+									<h2>¿Cómo te sientes con tu trabajo u oficio actual 👨‍💻?</h2>
 									<div className="input-test">
 										<input
 											className="check-custom"
@@ -242,7 +243,7 @@ export const Test = props => {
 							)}
 							{formStep >= 4 && (
 								<section className={formStep === 4 ? "test-active" : "d-none"}>
-									<h2>¿Cuantas comidas consumes diariamente 🍝?</h2>
+									<h2>¿Cuántas comidas consumes diariamente 🍝?</h2>
 									<div className="input-test">
 										<input
 											className="check-custom"
@@ -291,7 +292,7 @@ export const Test = props => {
 							)}
 							{formStep >= 5 && (
 								<section className={formStep === 5 ? "test-active" : "d-none"}>
-									<h2>¿Cuanta actividad fisica realizas semanalmete 🏃‍♂️?</h2>
+									<h2>¿Cuánta actividad fisica realizas semanalmente 🏃‍♂️?</h2>
 									<div className="input-test">
 										<input
 											className="check-custom"
@@ -301,7 +302,7 @@ export const Test = props => {
 											id="q5"
 											{...register("Question5", { required: true })}
 										/>
-										5 dias o mas
+										5 días o más
 									</div>
 									<div className="input-test">
 										<input
@@ -312,7 +313,7 @@ export const Test = props => {
 											id="q5"
 											{...register("Question5", { required: true })}
 										/>
-										4 a 5 dias
+										4 a 5 días
 									</div>
 									<div className="input-test">
 										<input
@@ -323,7 +324,7 @@ export const Test = props => {
 											id="q5"
 											{...register("Question5", { required: true })}
 										/>
-										1 a 3 dias
+										1 a 3 días
 									</div>
 									<div className="input-test">
 										<input
@@ -346,12 +347,12 @@ export const Test = props => {
 										</Spinner>
 									) : (
 										<>
-											<h1>Resultados del test</h1>
-											<h3>El resultado del test fue el siguiente:</h3>
-											<h2> {store.testResultMessage} </h2>
-											<Link to="/" className="btn btn-radius custom-btn-test">
+											<h2>Resultado</h2>
+											<h3>Tu pre-diagnóstico es el siguiente:</h3>
+											<h4 className="titleResult"> {store.testResultMessage} </h4>
+											<button href="/" className="btn-radius custom-btn-test">
 												Volver al inicio
-											</Link>
+											</button>
 										</>
 									)}
 								</section>

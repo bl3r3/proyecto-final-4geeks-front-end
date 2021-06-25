@@ -3,10 +3,10 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
 import { LandingPage } from "./views/home";
-import { Signup } from "./views/Signup";
+import { Signup } from "./views/signup";
 import { SignupProfesional } from "./views/SignUpProfesional";
 import { Login } from "./views/Login";
-import { Test } from "./views/test/Test";
+import { Test } from "./views/test/test";
 import { Dashboard } from "./views/dashboard/dashboard";
 import { Blog } from "./views/blog";
 import injectContext from "./store/appContext";

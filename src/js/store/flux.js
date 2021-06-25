@@ -87,9 +87,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 					user: JSON.parse(user)
 				});
 			},
-			// getDataTest: data => {
-			// 	console.log(data);
-			// },
 
 			resultTest: data => {
 				let pond =
@@ -136,7 +133,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			createReport: data => {
 				let store = getStore();
-
 				setStore({
 					diagnosticos: [...store.diagnosticos, data]
 				});
@@ -148,6 +144,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 					return id != index;
 				});
 				setStore({ diagnosticos: filterDiagnosticos });
+			},
+
+			borrarExercise: id => {
+				let store = getStore();
+				let filterEjercicios = store.ejercicios.filter((ejercicio, index) => {
+					return id != index;
+				});
+				setStore({ ejercicios: filterEjercicios });
 			},
 
 			createExercise: data => {

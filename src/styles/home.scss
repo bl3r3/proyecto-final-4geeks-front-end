@@ -54,6 +54,11 @@ img{
     width: 150px;
     border-radius: 30px;
     padding: 5px;
+
+    &:hover{
+        color: rgb(11, 148, 202) !important;
+        border-color: rgb(11, 148, 202) !important;
+    }
 }
 
 /*****************Características del segundo bloque*****************/
@@ -116,17 +121,21 @@ img{
 
 
 .custom-cards{
-    border-radius: 0px;
+    border-radius: 0px !important;
     background-color: rgba(255, 255, 255, 0.219);
     width: 300px;
+    height: 550px;
     margin-left: 47px;
+
+    &:hover{
+        box-shadow: 5px 8px 10px 5px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 5px 08px 20px 1px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 5px 08px 20px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px;
+    }
     
 }
 
-.custom-cards:hover{
-    box-shadow: 5px 8px 10px 5px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 5px 08px 20px 1px rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: 5px 08px 20px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px;
+.btn-see-more:hover{
+    text-decoration: none;
 }
-

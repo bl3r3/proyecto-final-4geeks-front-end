@@ -7,10 +7,12 @@
 }
 
 .custom-btn-test{
+    margin-top: 10px;
     font-size: 1.2rem !important;
-    color: gray;
+    color: rgb(0, 0, 0);
     border-radius: 20px;
-    width: 180px;
+    height: 40px;
+    width: 160px;
     background-color: white;
     border: none;
 
@@ -21,6 +23,7 @@
         border: 1px solid #1c3f88;
         border-radius:30px !important;
         transition: ease-in .1s;
+        text-decoration: none;
 }}
 
 .input-test{
@@ -36,6 +39,7 @@
     font-size: 1.2rem;
     border-radius: 30px;
     margin: 5px 0;
+    margin-bottom: 10px;
 }
 .input-test:hover{
     display: flex;
@@ -72,4 +76,10 @@
 
 .btn-radius{
     border-radius:30px;
+}
+
+.titleResult{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bolder;
 }

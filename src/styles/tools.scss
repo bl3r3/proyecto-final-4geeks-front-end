@@ -30,6 +30,7 @@ html, body, #app, #app>div {
     justify-content: start;
     flex: 1 1 auto !important;
     margin-right: 5px;
+    border-radius: 0px !important;
 }
 
 .titleToolCards{
@@ -58,14 +59,27 @@ html, body, #app, #app>div {
     border-radius: 10px;
     height: fit-content;
     font-size: 14px;
+    margin-bottom: 20px;
 }
 
 .columnCardTitle{
     font-weight: bold;
 }
 
-.tool-button:hover{
+.tool-button{
     text-decoration: none;
+    background-color: transparent;
+    border-color: transparent;
+    color: #1c3f88;
+    font-weight: bolder;
+
+    &:hover{
+        text-decoration: none;
+        background-color: transparent;
+        border-color: transparent;
+        color: #1c3f88;
+        font-weight: bolder;
+    }
 }
 
 /*****************Características de la bitácora*****************/
@@ -100,4 +114,24 @@ li{
     text-align: left;
     display: flex;
     justify-content: space-between;
+}
+
+.custom-modal2{
+    height: 190px;
+}
+
+.form-control-modal2{
+    margin-bottom: 15px;
+}
+
+.custom-btn-modal2{
+    font-size: 1.2rem !important;
+    color: white;
+    border-radius: 10px;
+    background-color: #1c3f88 !important;
+    border: none;
+
+    &:focus{
+        border: none;
+    }
 }

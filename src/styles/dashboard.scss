@@ -1,6 +1,6 @@
 /*****************Características del menu izq*****************/
 .side-menu{
-    background-color: rgba(38, 85, 238, 0.603);
+    background-color: rgba(185, 218, 245, 0.603);
     height: 100vh;
     width: 100%;
     display: flex;
@@ -8,6 +8,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 0 20px 0 0;
+    border: 1px solid rgba(0, 0, 0, 0.199);
 }
 
 .custom-img{
