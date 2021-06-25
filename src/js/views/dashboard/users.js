@@ -11,9 +11,17 @@ export const Users = () => {
 
 	const [modalShow, setModalShow] = React.useState(false);
 
-	const { register, handleSubmit } = useForm();
+	const { register, handleSubmit, reset } = useForm({
+		defaultValues: {
+			paciente: "",
+			diagnostico: ""
+		}
+	});
 
-	const onSubmit = data => actions.createReport(data);
+	const onSubmit = data => {
+		actions.createReport(data);
+		reset();
+	};
 
 	return (
 		<Container className="dash-container">

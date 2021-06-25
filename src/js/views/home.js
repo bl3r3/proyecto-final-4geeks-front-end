@@ -40,7 +40,7 @@ export const LandingPage = () => {
 							<Link to="/test">
 								<button className="test-btn">GO TEST</button>
 							</Link>
-							<Link to="/dashboard">
+							<Link to="/login">
 								<button className="sign-in-btn">SIGN IN</button>
 							</Link>
 						</div>

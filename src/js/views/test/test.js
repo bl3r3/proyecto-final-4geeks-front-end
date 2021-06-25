@@ -350,9 +350,9 @@ export const Test = props => {
 											<h2>Resultado</h2>
 											<h3>Tu pre-diagnóstico es el siguiente:</h3>
 											<h4 className="titleResult"> {store.testResultMessage} </h4>
-											<button href="/" className="btn-radius custom-btn-test">
+											<Link to="/" className="btn-radius custom-btn-test">
 												Volver al inicio
-											</button>
+											</Link>
 										</>
 									)}
 								</section>

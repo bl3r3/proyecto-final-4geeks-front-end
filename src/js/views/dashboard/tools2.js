@@ -16,8 +16,8 @@ export const Tools2 = props => {
 						<Card.Body className="spaceBetweenCards">
 							<Card className="outerCard">
 								<Card.Body className="columnCardBody">
-									<Card.Title className="columnCardTitle">Roberto</Card.Title>
-									<Card.Text>Tiene un pre-diagnóstico de altos niveles de estrés.</Card.Text>
+									<Card.Title className="columnCardTitle">Roberto Carrasquel</Card.Title>
+									<Card.Text>Posee un pre diagnóstico de altos niveles de estres.</Card.Text>
 								</Card.Body>
 							</Card>
 						</Card.Body>
